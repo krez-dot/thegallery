@@ -5,15 +5,175 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Gallery</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="landingpage.css">
 </head>
 <body>
     <div class="container">
-        <!-- Hero Section -->
+        <!-- Page transition overlay (hidden by default) -->
+        <div class="page-transition" id="pageTransition">
+            <div class="transition-text">Entering The Gallery...</div>
+        </div>
+        
+        <!-- Button animation container -->
+        <div class="button-animation-container" id="buttonAnimationContainer"></div>
+        
+        <!-- Hero Section with animations -->
         <section class="hero">
-            <h1 class="hero-title">THE GALLERY</h1>
-            <p class="hero-subtitle">a space where art meets emotion</p>
-            <a href="homepage.html" class="cta-button">enter gallery</a>
+            <!-- Floating decorative elements -->
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            
+            <div class="hero-content">
+                <h1 class="hero-title">THE GALLERY</h1>
+                <p class="hero-subtitle">a space where art meets emotion</p>
+                <button class="cta-button" id="enterButton">
+                    <span class="button-text">enter gallery</span>
+                    <span class="button-icon"><i class="fas fa-arrow-right"></i></span>
+                </button>
+            </div>
         </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hero = document.querySelector('.hero');
+            const title = document.querySelector('.hero-title');
+            const button = document.getElementById('enterButton');
+            const buttonAnimationContainer = document.getElementById('buttonAnimationContainer');
+            const pageTransition = document.getElementById('pageTransition');
+            
+            // Parallax effect on mouse move
+            hero.addEventListener('mousemove', function(e) {
+                const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+                const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+                
+                hero.style.transform = `translate(${xAxis}px, ${yAxis}px)`;
+            });
+            
+            // Reset position when mouse leaves
+            hero.addEventListener('mouseleave', function() {
+                hero.style.transform = 'translate(0, 0)';
+                hero.style.transition = 'transform 0.5s ease-out';
+                setTimeout(() => {
+                    hero.style.transition = '';
+                }, 500);
+            });
+            
+            // Add a gentle color transition to the CTA button
+            button.addEventListener('mouseenter', function() {
+                if (!this.classList.contains('loading') && !this.classList.contains('success')) {
+                    this.style.background = 'linear-gradient(135deg, #443627 0%, #5a4a35 100%)';
+                }
+            });
+            
+            button.addEventListener('mouseleave', function() {
+                if (!this.classList.contains('loading') && !this.classList.contains('success')) {
+                    this.style.background = '#443627';
+                }
+            });
+            
+            // Add a subtle typing effect to the subtitle
+            const subtitle = document.querySelector('.hero-subtitle');
+            const originalText = subtitle.textContent;
+            subtitle.textContent = '';
+            
+            let i = 0;
+            const typeWriter = () => {
+                if (i < originalText.length) {
+                    subtitle.textContent += originalText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 30);
+                }
+            };
+            
+            // Start typing effect after a short delay
+            setTimeout(typeWriter, 1000);
+            
+            // Button click animation with delay
+            button.addEventListener('click', function() {
+                // Prevent multiple clicks
+                if (this.classList.contains('loading') || this.classList.contains('success')) {
+                    return;
+                }
+                
+                // Step 1: Create particle explosion effect
+                createParticleExplosion(this);
+                
+                // Step 2: Show loading state
+                setTimeout(() => {
+                    this.classList.add('loading');
+                }, 200);
+                
+                // Step 3: Show success state after loading
+                setTimeout(() => {
+                    this.classList.remove('loading');
+                    this.classList.add('success');
+                }, 1500);
+                
+                // Step 4: Show page transition and navigate after delay
+                setTimeout(() => {
+                    // Activate page transition
+                    pageTransition.classList.add('active');
+                    
+                    // Navigate to homepage after transition animation completes
+                    setTimeout(() => {
+                        window.location.href = "homepage.html";
+                    }, 2000); // 2 second delay for the full transition
+                    
+                }, 2200); // Wait a bit after success state
+            });
+            
+            // Function to create particle explosion effect
+            function createParticleExplosion(element) {
+                const rect = element.getBoundingClientRect();
+                const centerX = rect.left + rect.width / 2;
+                const centerY = rect.top + rect.height / 2;
+                
+                // Create 12 particles
+                for (let i = 0; i < 12; i++) {
+                    const particle = document.createElement('div');
+                    particle.classList.add('particle');
+                    
+                    // Random size between 4px and 10px
+                    const size = Math.random() * 6 + 4;
+                    particle.style.width = `${size}px`;
+                    particle.style.height = `${size}px`;
+                    
+                    // Random color variation
+                    const colorVariant = Math.floor(Math.random() * 30);
+                    particle.style.backgroundColor = `rgba(${68 + colorVariant}, ${54 + colorVariant}, ${39 + colorVariant}, 0.7)`;
+                    
+                    // Random angle and distance
+                    const angle = (i * 30) + Math.random() * 15;
+                    const distance = 60 + Math.random() * 40;
+                    const tx = Math.cos(angle * Math.PI / 180) * distance;
+                    const ty = Math.sin(angle * Math.PI / 180) * distance;
+                    
+                    // Set starting position
+                    particle.style.left = `${centerX}px`;
+                    particle.style.top = `${centerY}px`;
+                    
+                    // Set CSS custom properties for animation
+                    particle.style.setProperty('--tx', `${tx}px`);
+                    particle.style.setProperty('--ty', `${ty}px`);
+                    
+                    // Add to container
+                    buttonAnimationContainer.appendChild(particle);
+                    
+                    // Animate particle
+                    particle.style.animation = `particleExplode 0.8s ease-out forwards`;
+                    
+                    // Remove particle after animation
+                    setTimeout(() => {
+                        if (particle.parentNode) {
+                            particle.parentNode.removeChild(particle);
+                        }
+                    }, 800);
+                }
+            }
+        });
+    </script>
 </body>
 </html>
