@@ -3,56 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <!-- Primary Meta Tags -->
     <title>The Gallery</title>
-    <meta name="description" content="Explore our curated collection of art from Renaissance to Contemporary, featuring works by famous painters like Da Vinci, Van Gogh, and Monet. Virtual art gallery experience."/>
-    <meta name="keywords" content="art gallery, paintings, contemporary art, renaissance art, modern art, photography, Leonardo da Vinci, Van Gogh, Monet, art exhibition"/>
+    <meta
+      name="description"
+      content="Explore our curated collection of art from Renaissance to Contemporary, featuring works by famous painters like Da Vinci, Van Gogh, Monet. Virtual  experience."
+    />
+    <meta
+      name="keywords"
+      content="art gallery, paintings, contemporary art, renaissance art, modern art, photography, Leonardo da Vinci, Van Gogh, Monet, art exhibition"
+    />
     <meta name="author" content="The Gallery" />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://thegallery.example.com/" />
-    <meta property="og:title" content="The Gallery - Art Collection & Exhibitions"/>
-    <meta property="og:description" content="Explore our curated collection of art from Renaissance to Contemporary. Virtual art gallery experience."/>
-    <meta property="og:image" content="https://thegallery.example.com/images/default.jpg"/>
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://thegallery.example.com/" />
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta
+      property="og:title"
+      content="The Gallery - Art Collection & Exhibitions"
+    />
+    <meta
+      property="og:description"
+      content="Explore our curated collection of art from Renaissance to Contemporary. Virtual art gallery experience."
+    />
+    <link rel="canonical" href="https://krez-dot.github.io/the-gallery/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/homepage.css" />
   </head>
   <body>
+    <!-- Background Audio Controls -->
+    <!-- Background Audio Controls -->
+<div class="audio-controls">
+  <div class="audio-player">
+    <div class="track-info">
+      <div class="track-title">Gymnopédie No. 1 • Erik Satie</div>
+    </div>
+    
+    <button class="audio-btn" id="audioToggle">
+      <svg class="audio-icon" viewBox="0 0 24 24" id="audioIcon">
+        <path d="M14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+        <path d="M16 7.96v8.08c1.21-.91 2-2.38 2-4.04s-.79-3.13-2-4.04z"/>
+        <path d="M3 9v6h4l5 5V4L7 9H3z"/>
+      </svg>
+      <svg class="muted-icon" viewBox="0 0 24 24" style="display: none">
+        <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+      </svg>
+    </button>
+    
+    <div class="volume-controls">
+      <div class="volume-slider-container">
+        <input type="range" class="volume-slider" id="volumeControl" min="0" max="100" value="30">
+        <div class="volume-level">30%</div>
+      </div>
+    </div>
+    
+    <div class="visualizer">
+      <div class="visualizer-bar"></div>
+      <div class="visualizer-bar"></div>
+      <div class="visualizer-bar"></div>
+      <div class="visualizer-bar"></div>
+      <div class="visualizer-bar"></div>
+    </div>
+  </div>
+</div>
+    <!-- Background Audio Element -->
+    <audio id="backgroundAudio" loop>
+      <source src="gymnopedie-no1.mp3" type="audio/mpeg" />
+    </audio>
     <div class="page-container">
-      <!-- Mobile Menu Toggle (only visible on mobile) -->
+      <!-- Mobile Menu Toggle -->
       <div class="mobile-menu-toggle">
         <span></span>
         <span></span>
         <span></span>
       </div>
-
-      <!-- Mobile Overlay (only visible on mobile) -->
+      <!-- Mobile Overlay -->
       <div class="mobile-overlay"></div>
-
       <!-- Top Header -->
       <div class="top-header"></div>
-
       <!-- Sidebar Navigation -->
       <div class="sidebar">
         <div class="sidebar-content">
           <div class="sidebar-title">THE GALLERY</div>
           <div class="sidebar-divider"></div>
-
+          <!-- Navigation Items -->
           <div class="nav-item active">
             <div class="nav-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -64,7 +106,6 @@
             </div>
             <div class="nav-text">Home</div>
           </div>
-
           <div class="nav-item">
             <div class="nav-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -76,43 +117,41 @@
             </div>
             <div class="nav-text">Painter</div>
           </div>
-
           <div class="nav-item">
             <div class="nav-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                 <path
                   fill="#443627"
-                  d="M290.4 70C288.9 66.4 285.4 64 281.5 64L262.5 64C258.6 64 255 66.4 253.6 70L232.9 121.7C229.7 129.7 218.3 129.7 215.1 121.7L194.4 70C192.9 66.4 189.4 64 185.5 64L176 64C149.5 64 128 85.5 128 112L128 320L512 320L512 112C512 85.5 490.5 64 464 64L358.5 64C354.6 64 351 66.4 349.6 70L328.9 121.7C325.7 129.7 314.3 129.7 311.1 121.7L290.4 70zM128 368L128 384C128 419.3 156.7 448 192 448L256 448L256 512C256 547.3 284.7 576 320 576C355.3 576 384 547.3 384 512L384 448L448 448C483.3 448 512 419.3 512 384L512 368L128 368zM320 528C311.2 528 304 520.8 304 512C304 503.2 311.2 496 320 496C328.8 496 336 503.2 336 512C336 520.8 328.8 528 320 528z"
+                  d="M373.5 27.1c15-17.2 36.7-27.1 59.6-27.1 43.6 0 79 35.4 79 79 0 22.8-9.9 44.6-27.1 59.6L283.7 313.8 273 303 209 239 198.2 228.3 373.5 27.1zM161.1 259C162 260 188 286 239 337l13.9 13.9-17.1 74.2c-3.9 17.1-16.9 30.7-33.8 35.4l-169.8 47.5 92.3-92.3c1.2 .1 2.3 .2 3.5 .2 17.7 0 32-14.3 32-32s-14.3-32-32-32-32 14.3-32 32c0 1.2 .1 2.4 .2 3.5L3.9 479.8 51.5 310c4.7-16.9 18.3-29.9 35.4-33.8L161.1 259z"
                 />
               </svg>
             </div>
             <div class="nav-text">Contemporary</div>
           </div>
-
           <div class="nav-item">
             <div class="nav-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
                 <path
                   fill="#443627"
-                  d="M290.4 70C288.9 66.4 285.4 64 281.5 64L262.5 64C258.6 64 255 66.4 253.6 70L232.9 121.7C229.7 129.7 218.3 129.7 215.1 121.7L194.4 70C192.9 66.4 189.4 64 185.5 64L176 64C149.5 64 128 85.5 128 112L128 320L512 320L512 112C512 85.5 490.5 64 464 64L358.5 64C354.6 64 351 66.4 349.6 70L328.9 121.7C325.7 129.7 314.3 129.7 311.1 121.7L290.4 70zM128 368L128 384C128 419.3 156.7 448 192 448L256 448L256 512C256 547.3 284.7 576 320 576C355.3 576 384 547.3 384 512L384 448L448 448C483.3 448 512 419.3 512 384L512 368L128 368zM320 528C311.2 528 304 520.8 304 512C304 503.2 311.2 496 320 496C328.8 496 336 503.2 336 512C336 520.8 328.8 528 320 528z"
+                  d="M352.9 21.2L308 66.1 445.9 204 490.8 159.1C504.4 145.6 512 127.2 512 108s-7.6-37.6-21.2-51.1L455.1 21.2C441.6 7.6 423.2 0 404 0s-37.6 7.6-51.1 21.2zM274.1 100L58.9 315.1c-10.7 10.7-18.5 24.1-22.6 38.7L.9 481.6c-2.3 8.3 0 17.3 6.2 23.4s15.1 8.5 23.4 6.2l127.8-35.5c14.6-4.1 27.9-11.8 38.7-22.6L412 237.9 274.1 100z"
                 />
               </svg>
             </div>
             <div class="nav-text">Modern</div>
           </div>
-
           <div class="nav-item">
             <div class="nav-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                 <path
                   fill="#443627"
-                  d="M290.4 70C288.9 66.4 285.4 64 281.5 64L262.5 64C258.6 64 255 66.4 253.6 70L232.9 121.7C229.7 129.7 218.3 129.7 215.1 121.7L194.4 70C192.9 66.4 189.4 64 185.5 64L176 64C149.5 64 128 85.5 128 112L128 320L512 320L512 112C512 85.5 490.5 64 464 64L358.5 64C354.6 64 351 66.4 349.6 70L328.9 121.7C325.7 129.7 314.3 129.7 311.1 121.7L290.4 70zM128 368L128 384C128 419.3 156.7 448 192 448L256 448L256 512C256 547.3 284.7 576 320 576C355.3 576 384 547.3 384 512L384 448L448 448C483.3 448 512 419.3 512 384L512 368L128 368zM320 528C311.2 528 304 520.8 304 512C304 503.2 311.2 496 320 496C328.8 496 336 503.2 336 512C336 520.8 328.8 528 320 528z"
+                  d="M512.5 74.3L291.1 222C262 241.4 243.5 272.9 240.5 307.3C302.8 320.1 351.9 369.2 364.8 431.6C399.3 428.6 430.7 410.1 450.1 381L597.7 159.5C604.4 149.4 608 137.6 608 125.4C608 91.5 580.5 64 546.6 64C534.5 64 522.6 67.6 512.5 74.3zM320 464C320 402.1 269.9 352 208 352C146.1 352 96 402.1 96 464C96 467.9 96.2 471.8 96.6 475.6C98.4 493.1 86.4 512 68.8 512L64 512C46.3 512 32 526.3 32 544C32 561.7 46.3 576 64 576L208 576C269.9 576 320 525.9 320 464z"
                 />
               </svg>
             </div>
             <div class="nav-text">Renaissance</div>
           </div>
-
           <div class="nav-item">
             <div class="nav-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -124,7 +163,6 @@
             </div>
             <div class="nav-text">Photography</div>
           </div>
-
           <div class="nav-item" data-href="contact.html">
             <div class="nav-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -136,7 +174,6 @@
             </div>
             <div class="nav-text">Contact</div>
           </div>
-
           <div class="nav-item" data-href="about.html">
             <div class="nav-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -150,7 +187,6 @@
           </div>
         </div>
       </div>
-
       <!-- Main Content -->
       <div class="main-content">
         <!-- Hero Section -->
@@ -158,10 +194,10 @@
           <img class="hero-image" src="images/default.jpg" alt="Gallery Hero" />
           <h1 class="hero-title">THE GALLERY</h1>
           <p class="hero-description">
-            <span>welcome to </span
-            ><span class="hero-description-bold">the gallery</span
-            ><span>
-              — a space dedicated to celebrating creativity, emotion, and
+            <span>welcome to </span>
+            <span class="hero-description-bold">the gallery</span>
+            <span
+              >— a space dedicated to celebrating creativity, emotion, and
               vision. here, every artwork tells a story, inviting you to look
               closer, feel deeper, and discover the connections between art and
               life. whether you are an admirer, a collector, or simply curious,
@@ -175,7 +211,6 @@
         <!-- Famous Painters Section -->
         <section class="section painters-section">
           <h2 class="painters-title">Famous Painter</h2>
-
           <div class="painters-container">
             <div class="painter-card leonardo">
               <img src="images/leonardo.png" alt="Leonardo Da Vinci" />
@@ -186,7 +221,6 @@
                 engineer, scientist, theorist, sculptor, and architect.
               </div>
             </div>
-
             <div class="painter-card van-gogh">
               <img src="images/da vinsi.png" alt="Vincent Van Gogh" />
               <div class="painter-name">Vincent Van Gogh</div>
@@ -196,7 +230,6 @@
                 history of Western art.
               </div>
             </div>
-
             <div class="painter-card monet">
               <img src="images/claude ml gods.png" alt="Claude Monet" />
               <div class="painter-name">Claude Monet</div>
@@ -209,354 +242,450 @@
             </div>
           </div>
         </section>
-
         <!-- Image Modal/Popup -->
         <div class="image-modal" id="imageModal">
           <button class="modal-close" id="modalClose">&times;</button>
-          
           <div class="modal-content">
             <img class="modal-img" id="modalImg" src="" alt="" />
             <div class="modal-caption" id="modalCaption"></div>
-            
             <div class="modal-zoom-controls">
               <button class="zoom-btn" id="zoomIn">+</button>
               <button class="zoom-btn" id="zoomOut">-</button>
               <button class="zoom-btn" id="zoomReset">↺</button>
             </div>
-            
             <div class="modal-swipe-indicator">Swipe to navigate</div>
           </div>
-          
-          <div class="modal-loading" id="modalLoading" style="display: none;">Loading</div>
+          <div class="modal-loading" id="modalLoading" style="display: none">
+            Loading
+          </div>
+        </div>
+        <div class="section-divider"></div>
+
+        <!-- Contemporary Art Section -->
+        <div id="contemporary-art" class="section contemporary-art">
+          <div class="section-title contemporary-art-title">
+            Contemporary Art
+          </div>
+          <div class="art-section-container">
+            <!-- Julie Mehretu -->
+            <div class="artwork-group julie">
+              <img
+                class="artwork-img"
+                src="contemporary/julie.jpg"
+                alt="Everywhen by Julie Mehretu"
+              />
+            </div>
+            <div class="artwork-info julie">
+              <span class="artwork-title">Julie Mehretu</span><br />
+              <span class="artwork-details">Everywhen<br />2021 - 2023</span>
+            </div>
+
+            <!-- Joan Snyder -->
+            <div class="artwork-group joan">
+              <img
+                class="artwork-img"
+                src="contemporary/joan.jpg"
+                alt="My August by Joan Snyder"
+              />
+            </div>
+            <div class="artwork-info joan">
+              <span class="artwork-title">Joan Snyder</span><br />
+              <span class="artwork-details">My August<br />2023</span>
+            </div>
+
+            <!-- Julian Schnabel -->
+            <div class="artwork-group julian">
+              <img
+                class="artwork-img"
+                src="contemporary/julian.jpg"
+                alt="Portrait of Agnes Gund by Julian Schnabel"
+              />
+            </div>
+            <div class="artwork-info julian">
+              <span class="artwork-title">Julian Schnabel</span><br />
+              <span class="artwork-details"
+                >Portrait of Agnes Gund<br />2021</span
+              >
+            </div>
+
+            <!-- Santiago Yahuarcani -->
+            <div class="artwork-group santiago">
+              <img
+                class="artwork-img"
+                src="contemporary/yamaguchi.jpg"
+                alt="Cosmovisión Huitoto by Santiago Yahuarcani"
+              />
+            </div>
+            <div class="artwork-info santiago">
+              <span class="artwork-title">Santiago Yahuarcani</span><br />
+              <span class="artwork-details">Cosmovisión Huitoto<br />2022</span>
+            </div>
+
+            <!-- Julian Lethbridge -->
+            <div class="artwork-group lethbridge">
+              <img
+                class="artwork-img"
+                src="contemporary/letbrid.png"
+                alt="Carpenter's Square by Julian Lethbridge"
+              />
+            </div>
+            <div class="artwork-info lethbridge">
+              <span class="artwork-title">Julian Lethbridge</span><br />
+              <span class="artwork-details">Carpenter's Square<br />2021</span>
+            </div>
+
+            <!-- Mark Grotjahn -->
+            <div class="artwork-group mark">
+              <img
+                class="artwork-img"
+                src="contemporary/Michael Armitage.png"
+                alt="(Circus No. 3 Face 44.20) by Mark Grotjahn"
+              />
+            </div>
+            <div class="artwork-info mark">
+              <span class="artwork-title">Mark Grotjahn</span><br />
+              <span class="artwork-details"
+                >(Circus No. 3 Face 44.20)<br />2013</span
+              >
+            </div>
+
+            <!-- Josh Smith -->
+            <div class="artwork-group josh">
+              <img
+                class="artwork-img"
+                src="contemporary/Mark Grotjahn.png"
+                alt="Artwork by Josh Smith"
+              />
+            </div>
+            <div class="artwork-info josh">
+              <span class="artwork-title">Josh Smith</span><br />
+              <span class="artwork-details">Untitled<br />2013</span>
+            </div>
+
+            <!-- Michael Armitage -->
+            <div class="artwork-group michael">
+              <img
+                class="artwork-img"
+                src="contemporary/Josh Smith.png"
+                alt="Curfew (Likoni March 27 2020) by Michael Armitage"
+              />
+            </div>
+            <div class="artwork-info michael">
+              <span class="artwork-title">Michael Armitage</span><br />
+              <span class="artwork-details"
+                >Curfew (Likoni March 27 2020)<br />2022</span
+              >
+            </div>
+          </div>
         </div>
 
         <div class="section-divider"></div>
 
-        <!-- Contemporary Art Section -->
-<div id="contemporary-art" class="section contemporary-art">
-  <div class="section-title contemporary-art-title">
-    Contemporary Art
-  </div>
-  
-  <div class="art-section-container">
-    <!-- Julie Mehretu -->
-    <div class="artwork-group julie">
-      <img class="artwork-img" src="contemporary/julie.jpg" alt="Everywhen by Julie Mehretu"/>
-    </div>
-    <div class="artwork-info julie">
-      <span class="artwork-title">Julie Mehretu</span>
-      <br>
-      <span class="artwork-details">Everywhen<br>2021 - 2023</span>
-    </div>
-    
-    <!-- Joan Snyder -->
-    <div class="artwork-group joan">
-      <img class="artwork-img" src="contemporary/joan.jpg" alt="My August by Joan Snyder"/>
-    </div>
-    <div class="artwork-info joan">
-      <span class="artwork-title">Joan Snyder</span>
-      <br>
-      <span class="artwork-details">My August<br>2023</span>
-    </div>
-    
-    <!-- Julian Schnabel -->
-    <div class="artwork-group julian">
-      <img class="artwork-img" src="contemporary/julian.jpg" alt="Portrait of Agnes Gund by Julian Schnabel"/>
-    </div>
-    <div class="artwork-info julian">
-      <span class="artwork-title">Julian Schnabel</span>
-      <br>
-      <span class="artwork-details">Portrait of Agnes Gund<br>2021</span>
-    </div>
-    
-    <!-- Santiago Yahuarcani -->
-    <div class="artwork-group santiago">
-      <img class="artwork-img" src="contemporary/yamaguchi.jpg" alt="Cosmovisión Huitoto by Santiago Yahuarcani"/>
-    </div>
-    <div class="artwork-info santiago">
-      <span class="artwork-title">Santiago Yahuarcani</span>
-      <br>
-      <span class="artwork-details">Cosmovisión Huitoto<br>2022</span>
-    </div>
-    
-    <!-- Julian Lethbridge -->
-    <div class="artwork-group lethbridge">
-      <img class="artwork-img" src="contemporary/letbrid.png" alt="Carpenter's Square by Julian Lethbridge"/>
-    </div>
-    <div class="artwork-info lethbridge">
-      <span class="artwork-title">Julian Lethbridge</span>
-      <br>
-      <span class="artwork-details">Carpenter's Square<br>2021</span>
-    </div>
-    
-    <!-- Mark Grotjahn -->
-    <div class="artwork-group mark">
-      <img class="artwork-img" src="contemporary/Michael Armitage.png" alt="(Circus No. 3 Face 44.20) by Mark Grotjahn"/>
-    </div>
-    <div class="artwork-info mark">
-      <span class="artwork-title">Mark Grotjahn</span>
-      <br>
-      <span class="artwork-details">(Circus No. 3 Face 44.20)<br>2013</span>
-    </div>
-    
-    <!-- Josh Smith -->
-    <div class="artwork-group josh">
-      <img class="artwork-img" src="contemporary/Mark Grotjahn.png" alt="Artwork by Josh Smith"/>
-    </div>
-    <div class="artwork-info josh">
-      <span class="artwork-title">Josh Smith</span>
-      <br>
-      <span class="artwork-details">Untitled<br>2013</span>
-    </div>
-    
-    <!-- Michael Armitage -->
-    <div class="artwork-group michael">
-      <img class="artwork-img" src="contemporary/Josh Smith.png" alt="Curfew (Likoni March 27 2020) by Michael Armitage"/>
-    </div>
-    <div class="artwork-info michael">
-      <span class="artwork-title">Michael Armitage</span>
-      <br>
-      <span class="artwork-details">Curfew (Likoni March 27 2020)<br>2022</span>
-    </div>
-  </div>
-</div>
+        <!-- Modern Art Section -->
+        <div id="modern-art" class="section modern-art">
+          <div class="section-title modern-art-title">Modern Art</div>
+          <div class="art-section-container">
+            <!-- Richard Paul Lohse -->
+            <div class="artwork-group richard">
+              <img
+                class="artwork-img"
+                src="modern/Richard Paul Lohse.png"
+                alt="Fifteen Systematic Color Rows by Richard Paul Lohse"
+              />
+            </div>
+            <div class="artwork-info richard">
+              <span class="artwork-title">Richard Paul Lohse</span><br />
+              <span class="artwork-details"
+                >Fifteen Systematic Color Rows<br />1950</span
+              >
+            </div>
 
-<div class="section-divider"></div>
+            <!-- Jan Mauller -->
+            <div class="artwork-group jan">
+              <img
+                class="artwork-img"
+                src="modern/Jan Mauller.png"
+                alt="Faust, I by Jan Mauller"
+              />
+            </div>
+            <div class="artwork-info jan">
+              <span class="artwork-title">Jan Mauller</span><br />
+              <span class="artwork-details">Faust, I<br />1956</span>
+            </div>
 
-<!-- Modern Art Section -->
-<div id="modern-art" class="section modern-art">
-  <div class="section-title modern-art-title">Modern Art</div>
-  
-  <div class="art-section-container">
-    <!-- Richard Paul Lohse -->
-    <div class="artwork-group richard">
-      <img class="artwork-img" src="modern/Richard Paul Lohse.png" alt="Fifteen Systematic Color Rows by Richard Paul Lohse"/>
-    </div>
-    <div class="artwork-info richard">
-      <span class="artwork-title">Richard Paul Lohse</span>
-      <br>
-      <span class="artwork-details">Fifteen Systematic Color Rows<br>1950</span>
-    </div>
-    
-    <!-- Jan Mauller -->
-    <div class="artwork-group jan">
-      <img class="artwork-img" src="modern/Jan Mauller.png" alt="Faust, I by Jan Mauller"/>
-    </div>
-    <div class="artwork-info jan">
-      <span class="artwork-title">Jan Mauller</span>
-      <br>
-      <span class="artwork-details">Faust, I<br>1956</span>
-    </div>
-    
-    <!-- Raphael Soyer -->
-    <div class="artwork-group raphael">
-      <img class="artwork-img" src="modern/Rapahael Soyer.png" alt="Seamstress by Raphael Soyer"/>
-    </div>
-    <div class="artwork-info raphael">
-      <span class="artwork-title">Raphael Soyer</span>
-      <br>
-      <span class="artwork-details">Seamstress<br>1956</span>
-    </div>
-    
-    <!-- Jane Wilson -->
-    <div class="artwork-group jane">
-      <img class="artwork-img" src="modern/Jane Wilson.png" alt="The Open Scene by Jane Wilson"/>
-    </div>
-    <div class="artwork-info jane">
-      <span class="artwork-title">Jane Wilson</span>
-      <br>
-      <span class="artwork-details">The Open Scene<br>1960</span>
-    </div>
-    
-    <!-- Salvatore Scarpitta -->
-    <div class="artwork-group salvatore">
-      <img class="artwork-img" src="modern/Salvatore Scarpitta.png" alt="Composition, I by Salvatore Scarpitta"/>
-    </div>
-    <div class="artwork-info salvatore">
-      <span class="artwork-title">Salvatore Scarpitta</span>
-      <br>
-      <span class="artwork-details">Composition, I<br>1959</span>
-    </div>
-    
-    <!-- Elmer Bischoff -->
-    <div class="artwork-group elmer">
-      <img class="artwork-img" src="modern/Elmer BIschoff.png" alt="Girl Wading by Elmer Bischoff"/>
-    </div>
-    <div class="artwork-info elmer">
-      <span class="artwork-title">Elmer Bischoff</span>
-      <br>
-      <span class="artwork-details">Girl Wading<br>1959</span>
-    </div>
-    
-    <!-- Remedios Varo -->
-    <div class="artwork-group remedios">
-      <img class="artwork-img" src="modern/Remedios Varo.png" alt="The Juggler (The Magician) by Remedios Varo"/>
-    </div>
-    <div class="artwork-info remedios">
-      <span class="artwork-title">Remedios Varo</span>
-      <br>
-      <span class="artwork-details">The Juggler (The Magician)<br>1956</span>
-    </div>
-    
-    <!-- Jean Dubuffet -->
-    <div class="artwork-group jean">
-      <img class="artwork-img" src="modern/Jean Dubuffet.png" alt="Head of a Girl by Jean Dubuffet"/>
-    </div>
-    <div class="artwork-info jean">
-      <span class="artwork-title">Jean Dubuffet</span>
-      <br>
-      <span class="artwork-details">Head of a Girl from Assemblages d'empreintes series<br>1954</span>
-    </div>
-  </div>
-</div>
+            <!-- Raphael Soyer -->
+            <div class="artwork-group raphael">
+              <img
+                class="artwork-img"
+                src="modern/Rapahael Soyer.png"
+                alt="Seamstress by Raphael Soyer"
+              />
+            </div>
+            <div class="artwork-info raphael">
+              <span class="artwork-title">Raphael Soyer</span><br />
+              <span class="artwork-details">Seamstress<br />1956</span>
+            </div>
 
-<div class="section-divider"></div>
+            <!-- Jane Wilson -->
+            <div class="artwork-group jane">
+              <img
+                class="artwork-img"
+                src="modern/Jane Wilson.png"
+                alt="The Open Scene by Jane Wilson"
+              />
+            </div>
+            <div class="artwork-info jane">
+              <span class="artwork-title">Jane Wilson</span><br />
+              <span class="artwork-details">The Open Scene<br />1960</span>
+            </div>
 
-<!-- Renaissance Art Section -->
-<div id="renaissance-art" class="section renaissance-art">
-  <div class="section-title renaissance-art-title">Renaissance Art</div>
-  
-  <div class="art-section-container">
-    <!-- Caravaggio - Medusa -->
-    <div class="artwork-group caravaggio-medusa">
-      <img class="artwork-img" src="renaissance/Caravaggio 2.png" alt="Medusa by Caravaggio"/>
-    </div>
-    <div class="artwork-info caravaggio-medusa">
-      <span class="artwork-title">Caravaggio</span>
-      <br>
-      <span class="artwork-details">Medusa<br>1595 - 1598</span>
-    </div>
-    
-    <!-- Titian -->
-    <div class="artwork-group titian">
-      <img class="artwork-img" src="renaissance/Titian.png" alt="Venus of Urbino by Titian"/>
-    </div>
-    <div class="artwork-info titian">
-      <span class="artwork-title">Titian</span>
-      <br>
-      <span class="artwork-details">Venus of Urbino<br>1538</span>
-    </div>
-    
-    <!-- Leonardo da Vinci -->
-    <div class="artwork-group leonardo-lady">
-      <img class="artwork-img" src="renaissance/Leonardo da Vinci.png" alt="Lady with an Ermine by Leonardo da Vinci"/>
-    </div>
-    <div class="artwork-info leonardo-lady">
-      <span class="artwork-title">Leonardo da Vinci</span>
-      <br>
-      <span class="artwork-details">Lady with an Ermine<br>1489</span>
-    </div>
-    
-    <!-- Caravaggio - Supper at Emmaus -->
-    <div class="artwork-group caravaggio-supper">
-      <img class="artwork-img" src="renaissance/Caravaggio.png" alt="Supper at Emmaus by Caravaggio"/>
-    </div>
-    <div class="artwork-info caravaggio-supper">
-      <span class="artwork-title">Caravaggio</span>
-      <br>
-      <span class="artwork-details">Supper at Emmaus<br>1601</span>
-    </div>
-    
-    <!-- Leonardo da Vinci - Ginevra de' Benci -->
-    <div class="artwork-group leonardo-ginevra">
-      <img class="artwork-img" src="renaissance/Leonardo da Vinci 1.png" alt="Ginevra de' Benci by Leonardo da Vinci"/>
-    </div>
-    <div class="artwork-info leonardo-ginevra">
-      <span class="artwork-title">Leonardo da Vinci</span>
-      <br>
-      <span class="artwork-details">Ginevra de' Benci<br>1474</span>
-    </div>
-    
-    <!-- Pieter Bruegel the Elder -->
-    <div class="artwork-group pieter">
-      <img class="artwork-img" src="renaissance/Pieter Bruegel the Elder.png" alt="The Dutch Proverbs by Pieter Bruegel the Elder"/>
-    </div>
-    <div class="artwork-info pieter">
-      <span class="artwork-title">Pieter Bruegel the Elder</span>
-      <br>
-      <span class="artwork-details">The Dutch Proverbs<br>1559</span>
-    </div>
-    
-    <!-- Raphael -->
-    <div class="artwork-group raphael-renaissance">
-      <img class="artwork-img" src="renaissance/Raphael.png" alt="Madonna of the Goldfinch by Raphael"/>
-    </div>
-    <div class="artwork-info raphael-renaissance">
-      <span class="artwork-title">Raphael</span>
-      <br>
-      <span class="artwork-details">Madonna of the Goldfinch<br>1505 - 1506</span>
-    </div>
-    
-    <!-- Caravaggio - Cupid as Victor -->
-    <div class="artwork-group caravaggio-cupid">
-      <img class="artwork-img" src="renaissance/Caravaggio 1.png" alt="Cupid as Victor by Caravaggio"/>
-    </div>
-    <div class="artwork-info caravaggio-cupid">
-      <span class="artwork-title">Caravaggio</span>
-      <br>
-      <span class="artwork-details">Cupid as Victor<br>1601</span>
-    </div>
-  </div>
-</div>
+            <!-- Salvatore Scarpitta -->
+            <div class="artwork-group salvatore">
+              <img
+                class="artwork-img"
+                src="modern/Salvatore Scarpitta.png"
+                alt="Composition, I by Salvatore Scarpitta"
+              />
+            </div>
+            <div class="artwork-info salvatore">
+              <span class="artwork-title">Salvatore Scarpitta</span><br />
+              <span class="artwork-details">Composition, I<br />1959</span>
+            </div>
 
-<div class="section-divider"></div>
+            <!-- Elmer Bischoff -->
+            <div class="artwork-group elmer">
+              <img
+                class="artwork-img"
+                src="modern/Elmer BIschoff.png"
+                alt="Girl Wading by Elmer Bischoff"
+              />
+            </div>
+            <div class="artwork-info elmer">
+              <span class="artwork-title">Elmer Bischoff</span><br />
+              <span class="artwork-details">Girl Wading<br />1959</span>
+            </div>
 
-<!-- Photography Section -->
-<div id="photography" class="section photography">
-  <div class="section-title photography-title">Photography</div>
-  
-  <div class="art-section-container">
-    <!-- Lena Koval -->
-    <div class="artwork-group lena">
-      <img class="artwork-img" src="photography/Lena Koval.png" alt="Eclipsed Horizons by Lena Koval"/>
-    </div>
-    <div class="artwork-info lena">
-      <span class="artwork-title">Lena Koval</span>
-      <br>
-      <span class="artwork-details">Eclipsed Horizons</span>
-    </div>
-    
-    <!-- Miles Grantt -->
-    <div class="artwork-group miles">
-      <img class="artwork-img" src="photography/Miles Grantt.png" alt="Nighttime Reverie by Miles Grantt"/>
-    </div>
-    <div class="artwork-info miles">
-      <span class="artwork-title">Miles Grantt</span>
-      <br>
-      <span class="artwork-details">Nighttime Reverie</span>
-    </div>
-    
-    <!-- Emilie Möri -->
-    <div class="artwork-group emilie">
-      <img class="artwork-img" src="photography/Emilie Möri.png" alt="Fuerte N°02 by Emilie Möri"/>
-    </div>
-    <div class="artwork-info emilie">
-      <span class="artwork-title">Emilie Möri</span>
-      <br>
-      <span class="artwork-details">Fuerte N°02 Photograph</span>
-    </div>
-    
-    <!-- Igor Vitomirov -->
-    <div class="artwork-group igor">
-      <img class="artwork-img" src="photography/Igor Vitomirov.png" alt="8142 Photograph by Igor Vitomirov"/>
-    </div>
-    <div class="artwork-info igor">
-      <span class="artwork-title">Igor Vitomirov</span>
-      <br>
-      <span class="artwork-details">8142 Photograph</span>
-    </div>
-    
-    <!-- Kristin Hart -->
-    <div class="artwork-group kristin">
-      <img class="artwork-img" src="photography/Kristin Hart.png" alt="Lean My Heart by Kristin Hart"/>
-    </div>
-    <div class="artwork-info kristin">
-      <span class="artwork-title">Kristin Hart</span>
-      <br>
-      <span class="artwork-details">Lean My Heart, Blue Ridge Mountains Photograph</span>
-    </div>
-  </div>
-</div>
+            <!-- Remedios Varo -->
+            <div class="artwork-group remedios">
+              <img
+                class="artwork-img"
+                src="modern/Remedios Varo.png"
+                alt="The Juggler (The Magician) by Remedios Varo"
+              />
+            </div>
+            <div class="artwork-info remedios">
+              <span class="artwork-title">Remedios Varo</span><br />
+              <span class="artwork-details"
+                >The Juggler (The Magician)<br />1956</span
+              >
+            </div>
+
+            <!-- Jean Dubuffet -->
+            <div class="artwork-group jean">
+              <img
+                class="artwork-img"
+                src="modern/Jean Dubuffet.png"
+                alt="Head of a Girl by Jean Dubuffet"
+              />
+            </div>
+            <div class="artwork-info jean">
+              <span class="artwork-title">Jean Dubuffet</span><br />
+              <span class="artwork-details"
+                >Head of a Girl from Assemblages d'empreintes series<br />1954</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- Renaissance Art Section -->
+        <div id="renaissance-art" class="section renaissance-art">
+          <div class="section-title renaissance-art-title">Renaissance Art</div>
+          <div class="art-section-container">
+            <!-- Use BOTH classes - old for CSS, new for semantics -->
+            <div class="artwork-group caravaggio-medusa botticelli-portrait">
+              <img
+                class="artwork-img"
+                src="renaissance/Idealized Portrait of a Lady (Portrait of Simonetta Vespucci as Nymph).png"
+                alt="Idealized Portrait of a Lady (Portrait of Simonetta Vespucci as Nymph) by Sandro Botticelli"
+              />
+            </div>
+            <div class="artwork-info caravaggio-medusa botticelli-portrait">
+              <span class="artwork-title">Sandro Botticelli</span><br />
+              <span class="artwork-details"
+                >Idealized Portrait of a Lady<br />1480</span
+              >
+            </div>
+            <!-- Titian -->
+            <div class="artwork-group titian">
+              <img
+                class="artwork-img"
+                src="renaissance/Titian.png"
+                alt="Venus of Urbino by Titian"
+              />
+            </div>
+            <div class="artwork-info titian">
+              <span class="artwork-title">Titian</span><br />
+              <span class="artwork-details">Venus of Urbino<br />1538</span>
+            </div>
+
+            <!-- Leonardo da Vinci -->
+            <div class="artwork-group leonardo-lady">
+              <img
+                class="artwork-img"
+                src="renaissance/Leonardo da Vinci.png"
+                alt="Lady with an Ermine by Leonardo da Vinci"
+              />
+            </div>
+            <div class="artwork-info leonardo-lady">
+              <span class="artwork-title">Leonardo da Vinci</span><br />
+              <span class="artwork-details">Lady with an Ermine<br />1489</span>
+            </div>
+
+            <!-- Caravaggio - Supper at Emmaus -->
+            <div class="artwork-group caravaggio-supper">
+              <img
+                class="artwork-img"
+                src="renaissance/Caravaggio.png"
+                alt="Supper at Emmaus by Caravaggio"
+              />
+            </div>
+            <div class="artwork-info caravaggio-supper">
+              <span class="artwork-title">Caravaggio</span><br />
+              <span class="artwork-details">Supper at Emmaus<br />1601</span>
+            </div>
+
+            <!-- Leonardo da Vinci - Ginevra de' Benci -->
+            <div class="artwork-group leonardo-ginevra">
+              <img
+                class="artwork-img"
+                src="renaissance/Leonardo da Vinci 1.png"
+                alt="Ginevra de' Benci by Leonardo da Vinci"
+              />
+            </div>
+            <div class="artwork-info leonardo-ginevra">
+              <span class="artwork-title">Leonardo da Vinci</span><br />
+              <span class="artwork-details">Ginevra de' Benci<br />1474</span>
+            </div>
+
+            <!-- Pieter Bruegel the Elder -->
+            <div class="artwork-group pieter">
+              <img
+                class="artwork-img"
+                src="renaissance/Pieter Bruegel the Elder.png"
+                alt="The Dutch Proverbs by Pieter Bruegel the Elder"
+              />
+            </div>
+            <div class="artwork-info pieter">
+              <span class="artwork-title">Pieter Bruegel the Elder</span><br />
+              <span class="artwork-details">The Dutch Proverbs<br />1559</span>
+            </div>
+
+            <!-- Raphael -->
+            <div class="artwork-group raphael-renaissance">
+              <img
+                class="artwork-img"
+                src="renaissance/Raphael.png"
+                alt="Madonna of the Goldfinch by Raphael"
+              />
+            </div>
+            <div class="artwork-info raphael-renaissance">
+              <span class="artwork-title">Raphael</span><br />
+              <span class="artwork-details"
+                >Madonna of the Goldfinch<br />1505 - 1506</span
+              >
+            </div>
+
+            <!-- Caravaggio - Cupid as Victor -->
+            <div class="artwork-group caravaggio-cupid">
+              <img
+                class="artwork-img"
+                src="renaissance/Caravaggio 1.png"
+                alt="Cupid as Victor by Caravaggio"
+              />
+            </div>
+            <div class="artwork-info caravaggio-cupid">
+              <span class="artwork-title">Caravaggio</span><br />
+              <span class="artwork-details">Cupid as Victor<br />1601</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- Photography Section -->
+        <div id="photography" class="section photography">
+          <div class="section-title photography-title">Photography</div>
+          <div class="art-section-container">
+            <!-- Lena Koval -->
+            <div class="artwork-group lena">
+              <img
+                class="artwork-img"
+                src="photography/Lena Koval.png"
+                alt="Eclipsed Horizons by Lena Koval"
+              />
+            </div>
+            <div class="artwork-info lena">
+              <span class="artwork-title">Lena Koval</span><br />
+              <span class="artwork-details">Eclipsed Horizons</span>
+            </div>
+
+            <!-- Miles Grantt -->
+            <div class="artwork-group miles">
+              <img
+                class="artwork-img"
+                src="photography/Miles Grantt.png"
+                alt="Nighttime Reverie by Miles Grantt"
+              />
+            </div>
+            <div class="artwork-info miles">
+              <span class="artwork-title">Miles Grantt</span><br />
+              <span class="artwork-details">Nighttime Reverie</span>
+            </div>
+
+            <!-- Emilie Möri -->
+            <div class="artwork-group emilie">
+              <img
+                class="artwork-img"
+                src="photography/Emilie Möri.png"
+                alt="Fuerte N°02 by Emilie Möri"
+              />
+            </div>
+            <div class="artwork-info emilie">
+              <span class="artwork-title">Emilie Möri</span><br />
+              <span class="artwork-details">Fuerte N°02 Photograph</span>
+            </div>
+
+            <!-- Igor Vitomirov -->
+            <div class="artwork-group igor">
+              <img
+                class="artwork-img"
+                src="photography/Igor Vitomirov.png"
+                alt="8142 Photograph by Igor Vitomirov"
+              />
+            </div>
+            <div class="artwork-info igor">
+              <span class="artwork-title">Igor Vitomirov</span><br />
+              <span class="artwork-details">8142 Photograph</span>
+            </div>
+
+            <!-- Kristin Hart -->
+            <div class="artwork-group kristin">
+              <img
+                class="artwork-img"
+                src="photography/Kristin Hart.png"
+                alt="Lean My Heart by Kristin Hart"
+              />
+            </div>
+            <div class="artwork-info kristin">
+              <span class="artwork-title">Kristin Hart</span><br />
+              <span class="artwork-details"
+                >Lean My Heart, Blue Ridge Mountains Photograph</span
+              >
+            </div>
+          </div>
+        </div>
 
         <!-- Footer -->
         <footer class="footer">
@@ -565,396 +694,377 @@
         </footer>
       </div>
     </div>
-
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // Mobile menu toggle
+        initMobileMenu();
+        initNavigation();
+        initScrollAnimations();
+        initCarousels();
+        initImageModal();
+        initBackgroundAudio();
+        initLoadingScreen();
+      });
+
+      function initMobileMenu() {
         const mobileToggle = document.querySelector(".mobile-menu-toggle");
         const sidebar = document.querySelector(".sidebar");
         const overlay = document.querySelector(".mobile-overlay");
 
-        if (mobileToggle && sidebar && overlay) {
-          mobileToggle.addEventListener("click", function () {
-            this.classList.toggle("active");
-            sidebar.classList.toggle("active");
-            overlay.classList.toggle("active");
-          });
+        if (!mobileToggle || !sidebar || !overlay) return;
 
-          overlay.addEventListener("click", function () {
-            mobileToggle.classList.remove("active");
-            sidebar.classList.remove("active");
-            this.classList.remove("active");
-          });
-        }
+        mobileToggle.addEventListener("click", function () {
+          this.classList.toggle("active");
+          sidebar.classList.toggle("active");
+          overlay.classList.toggle("active");
+        });
 
-        // Navigation handling
+        overlay.addEventListener("click", function () {
+          mobileToggle.classList.remove("active");
+          sidebar.classList.remove("active");
+          this.classList.remove("active");
+        });
+      }
+
+      function initNavigation() {
         const navItems = document.querySelectorAll(".nav-item");
 
         navItems.forEach((item) => {
           item.addEventListener("click", function () {
             const href = this.getAttribute("data-href");
 
-            // Close mobile menu if open
-            if (mobileToggle && mobileToggle.classList.contains("active")) {
-              mobileToggle.classList.remove("active");
-              sidebar.classList.remove("active");
-              overlay.classList.remove("active");
+            closeMobileMenu();
+
+            if (href && href.includes(".html")) {
+              window.location.href = href;
+              return;
             }
 
-            if (href) {
-              if (href.includes(".html")) {
-                window.location.href = href;
-                return;
-              }
-            }
-
-            navItems.forEach((navItem) => {
-              navItem.classList.remove("active");
-            });
-
-            this.classList.add("active");
-
-            const navText = this.querySelector(".nav-text").textContent;
-
-            if (navText === "Home") {
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            } else {
-              const targetId = navText.toLowerCase().replace(/\s+/g, "-");
-              const targetElement = document.getElementById(targetId);
-              if (targetElement) {
-                targetElement.scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                });
-              } else {
-                const sections = document.querySelectorAll(
-                  ".section-title, .painters-title"
-                );
-
-                for (let section of sections) {
-                  if (
-                    section.textContent
-                      .toLowerCase()
-                      .includes(navText.toLowerCase())
-                  ) {
-                    section.scrollIntoView({
-                      behavior: "smooth",
-                      block: "start",
-                    });
-                    break;
-                  }
-                }
-              }
-            }
+            updateActiveNavItem(this);
+            scrollToSection(this.querySelector(".nav-text").textContent);
           });
         });
+      }
 
-        // Scroll animations
+      function closeMobileMenu() {
+        const mobileToggle = document.querySelector(".mobile-menu-toggle");
+        const sidebar = document.querySelector(".sidebar");
+        const overlay = document.querySelector(".mobile-overlay");
+
+        if (mobileToggle?.classList.contains("active")) {
+          mobileToggle.classList.remove("active");
+          sidebar?.classList.remove("active");
+          overlay?.classList.remove("active");
+        }
+      }
+
+      function updateActiveNavItem(activeItem) {
+        document.querySelectorAll(".nav-item").forEach((item) => {
+          item.classList.remove("active");
+        });
+        activeItem.classList.add("active");
+      }
+
+      function scrollToSection(navText) {
+        if (navText === "Home") {
+          smoothScrollTo(0, 1200);
+          return;
+        }
+
+        const targetId = navText.toLowerCase().replace(/\s+/g, "-");
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          const headerOffset = 100;
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition =
+            elementPosition + window.pageYOffset - headerOffset;
+
+          smoothScrollTo(offsetPosition, 1000);
+          return;
+        }
+
+        const sections = document.querySelectorAll(
+          ".section-title, .painters-title"
+        );
+        for (let section of sections) {
+          if (
+            section.textContent.toLowerCase().includes(navText.toLowerCase())
+          ) {
+            const parentSection = section.closest(".section");
+            if (parentSection) {
+              const headerOffset = 100;
+              const elementPosition = parentSection.getBoundingClientRect().top;
+              const offsetPosition =
+                elementPosition + window.pageYOffset - headerOffset;
+
+              smoothScrollTo(offsetPosition, 1000);
+              break;
+            }
+          }
+        }
+      }
+
+      function smoothScrollTo(to, duration = 1000) {
+        const start = window.pageYOffset;
+        const change = to - start;
+        const startTime = performance.now();
+
+        function easeInOutCubic(t) {
+          return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+        }
+
+        function animate(currentTime) {
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+
+          const eased = easeInOutCubic(progress);
+          const position = start + change * eased;
+
+          window.scrollTo(0, position);
+
+          if (progress < 1) {
+            requestAnimationFrame(animate);
+          }
+        }
+
+        requestAnimationFrame(animate);
+      }
+
+      function initScrollAnimations() {
         const observerOptions = {
           root: null,
           rootMargin: "0px",
           threshold: 0.1,
         };
+        const observer = new IntersectionObserver(
+          handleIntersection,
+          observerOptions
+        );
 
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-
-              // Animate child elements with delays
-              if (entry.target.classList.contains("painters-section")) {
-                const cards = entry.target.querySelectorAll(".painter-card");
-                cards.forEach((card, index) => {
-                  setTimeout(() => {
-                    card.classList.add("visible");
-                  }, index * 200);
-                });
-              }
-            }
-          });
-        }, observerOptions);
-
-        // Observe sections
         const sections = document.querySelectorAll(
           ".painters-section, .contemporary-art, .modern-art, .renaissance-art, .photography, .footer"
         );
-        sections.forEach((section) => {
-          if (section) observer.observe(section);
-        });
+        sections.forEach((section) => observer.observe(section));
 
-        // Observe section dividers
-        const dividers = document.querySelectorAll(".section-divider");
         const dividerObserver = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-              }
+              if (entry.isIntersecting) entry.target.classList.add("visible");
             });
           },
           { threshold: 0.5 }
         );
 
-        dividers.forEach((divider) => {
-          if (divider) dividerObserver.observe(divider);
+        document.querySelectorAll(".section-divider").forEach((divider) => {
+          dividerObserver.observe(divider);
         });
 
-        // Add loading animation for painter cards
         setTimeout(() => {
-          const painterCards = document.querySelectorAll(".painter-card");
-          painterCards.forEach((card, index) => {
-            setTimeout(() => {
-              card.classList.add("visible");
-            }, 500 + index * 300);
+          document.querySelectorAll(".painter-card").forEach((card, index) => {
+            setTimeout(() => card.classList.add("visible"), 500 + index * 300);
           });
         }, 1000);
-      });
-      // After DOM loads
-      setTimeout(() => {
-        const sidebar = document.querySelector(".sidebar");
-        if (sidebar) {
-          sidebar.classList.add("loaded");
-        }
-      }, 800);
 
-      // Scroll animations
-      const observerOptions = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.1,
-      };
+        setTimeout(() => {
+          document.querySelector(".sidebar")?.classList.add("loaded");
+        }, 800);
+      }
 
-      const observer = new IntersectionObserver((entries) => {
+      function handleIntersection(entries) {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
+          if (!entry.isIntersecting) return;
 
-            // Animate child elements with delays
-            if (entry.target.classList.contains("painters-section")) {
-              const cards = entry.target.querySelectorAll(".painter-card");
-              cards.forEach((card, index) => {
-                setTimeout(() => {
-                  card.classList.add("visible");
-                }, index * 200);
-              });
-            }
+          entry.target.classList.add("visible");
 
-            // FIX: Also observe artwork elements within sections
-            if (
-              entry.target.classList.contains("contemporary-art") ||
-              entry.target.classList.contains("modern-art") ||
-              entry.target.classList.contains("renaissance-art") ||
-              entry.target.classList.contains("photography")
-            ) {
-              // Animate artwork images
-              const artworkImgs = entry.target.querySelectorAll(".artwork-img");
-              artworkImgs.forEach((img, index) => {
-                setTimeout(() => {
-                  img.classList.add("visible");
-                }, index * 100);
+          if (entry.target.classList.contains("painters-section")) {
+            entry.target
+              .querySelectorAll(".painter-card")
+              .forEach((card, index) => {
+                setTimeout(() => card.classList.add("visible"), index * 200);
               });
+          }
 
-              // Animate artwork info
-              const artworkInfos =
-                entry.target.querySelectorAll(".artwork-info");
-              artworkInfos.forEach((info, index) => {
-                setTimeout(() => {
-                  info.classList.add("visible");
-                }, index * 100 + 200);
-              });
-            }
+          const artSections = [
+            "contemporary-art",
+            "modern-art",
+            "renaissance-art",
+            "photography",
+          ];
+          if (artSections.some((cls) => entry.target.classList.contains(cls))) {
+            animateArtworkSection(entry.target);
           }
         });
-      }, observerOptions);
+      }
 
-      // Observe sections
-      const sections = document.querySelectorAll(
-        ".painters-section, .contemporary-art, .modern-art, .renaissance-art, .photography, .footer"
-      );
-      sections.forEach((section) => {
-        if (section) observer.observe(section);
-      });
-      
-      // Carousel functionality for mobile and tablet
+      function animateArtworkSection(section) {
+        section.querySelectorAll(".artwork-img").forEach((img, index) => {
+          setTimeout(() => img.classList.add("visible"), index * 100);
+        });
+
+        section.querySelectorAll(".artwork-info").forEach((info, index) => {
+          setTimeout(() => info.classList.add("visible"), index * 100 + 200);
+        });
+      }
+
+      function initCarousels() {
+        initializeCarousels();
+        window.addEventListener("resize", initializeCarousels);
+      }
+
       function initializeCarousels() {
-        // Check if we're on mobile/tablet
         if (window.innerWidth > 1024) {
-          // On desktop, ensure original containers are visible
           document
             .querySelectorAll(".painters-container, .art-section-container")
             .forEach((container) => {
               container.style.display = "block";
             });
-          return; // Don't create carousels on desktop
+          return;
         }
 
-        // Initialize painter cards carousel
+        createPainterCarousel();
+        createArtworkCarousels();
+      }
+
+      function createPainterCarousel() {
         const painterCards = document.querySelectorAll(".painter-card");
-        if (painterCards.length > 0) {
-          const paintersContainer = document.querySelector(
-            ".painters-container"
-          );
-          if (paintersContainer) {
-            paintersContainer.style.display = "none"; // Hide original
+        if (painterCards.length === 0) return;
 
-            // Check if carousel already exists
-            let paintersCarousel = document.querySelector(
-              ".painters-carousel-container"
-            );
-            if (!paintersCarousel) {
-              // Create carousel container
-              paintersCarousel = document.createElement("div");
-              paintersCarousel.className = "painters-carousel-container";
-              paintersContainer.parentNode.insertBefore(
-                paintersCarousel,
-                paintersContainer.nextSibling
-              );
+        const paintersContainer = document.querySelector(".painters-container");
+        if (!paintersContainer) return;
 
-              // Create carousel HTML
-              const carouselHTML = `
-                    <div class="carousel-container">
-                        <div class="carousel-slides">
-                            ${Array.from(painterCards)
-                              .map((card, index) => {
-                                const img = card.querySelector("img").outerHTML;
-                                const name =
-                                  card.querySelector(".painter-name").outerHTML;
-                                const bio =
-                                  card.querySelector(".painter-bio").outerHTML;
+        paintersContainer.style.display = "none";
 
-                                return `
-                                    <div class="carousel-slide polaroid ${
-                                      index === 0 ? "active" : ""
-                                    }">
-                                        <div class="painter-card">
-                                            ${img}
-                                            ${name}
-                                            ${bio}
-                                        </div>
-                                    </div>
-                                `;
-                              })
-                              .join("")}
-                        </div>
-                        <div class="carousel-controls">
-                            <button class="carousel-btn prev-btn">‹</button>
-                            <button class="carousel-btn next-btn">›</button>
-                        </div>
-                        <div class="carousel-dots">
-                            ${Array.from(painterCards)
-                              .map(
-                                (_, index) => `
-                                <button class="carousel-dot ${
-                                  index === 0 ? "active" : ""
-                                }" data-index="${index}"></button>
-                            `
-                              )
-                              .join("")}
-                        </div>
-                    </div>
-                `;
+        let carouselContainer = document.querySelector(
+          ".painters-carousel-container"
+        );
+        if (carouselContainer) return;
 
-              paintersCarousel.innerHTML = carouselHTML;
-              setupCarousel(
-                ".painters-carousel-container .carousel-container",
-                painterCards.length
-              );
-            }
-          }
-        }
+        carouselContainer = document.createElement("div");
+        carouselContainer.className = "painters-carousel-container";
+        paintersContainer.parentNode.insertBefore(
+          carouselContainer,
+          paintersContainer.nextSibling
+        );
 
-        // Initialize artwork carousels for each section
-        const artSections = [
+        const carouselHTML = `
+    <div class="carousel-container">
+      <div class="carousel-slides">
+        ${Array.from(painterCards)
+          .map(
+            (card, index) => `
+          <div class="carousel-slide polaroid ${index === 0 ? "active" : ""}">
+            <div class="painter-card">
+              ${card.querySelector("img").outerHTML}
+              ${card.querySelector(".painter-name").outerHTML}
+              ${card.querySelector(".painter-bio").outerHTML}
+            </div>
+          </div>
+        `
+          )
+          .join("")}
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-btn prev-btn">‹</button>
+        <button class="carousel-btn next-btn">›</button>
+      </div>
+      <div class="carousel-dots">
+        ${Array.from(painterCards)
+          .map(
+            (_, index) => `
+          <button class="carousel-dot ${
+            index === 0 ? "active" : ""
+          }" data-index="${index}"></button>
+        `
+          )
+          .join("")}
+      </div>
+    </div>
+  `;
+
+        carouselContainer.innerHTML = carouselHTML;
+        setupCarousel(
+          ".painters-carousel-container .carousel-container",
+          painterCards.length
+        );
+      }
+
+      function createArtworkCarousels() {
+        [
           "contemporary-art",
           "modern-art",
           "renaissance-art",
           "photography",
-        ];
-
-        artSections.forEach((sectionId) => {
+        ].forEach((sectionId) => {
           const section = document.getElementById(sectionId);
-          if (section) {
-            const artContainer = section.querySelector(
-              ".art-section-container"
-            );
-            if (artContainer) {
-              artContainer.style.display = "none"; // Hide original
+          if (!section) return;
 
-              // Check if carousel already exists
-              let artCarousel = section.querySelector(
-                ".art-carousel-container"
-              );
-              if (!artCarousel) {
-                // Get all artwork elements
-                const artworkImgs = section.querySelectorAll(".artwork-img");
-                const artworkInfos = section.querySelectorAll(".artwork-info");
+          const artContainer = section.querySelector(".art-section-container");
+          if (!artContainer) return;
 
-                if (artworkImgs.length > 0) {
-                  // Create carousel container
-                  artCarousel = document.createElement("div");
-                  artCarousel.className = "art-carousel-container";
-                  artContainer.parentNode.insertBefore(
-                    artCarousel,
-                    artContainer.nextSibling
-                  );
+          artContainer.style.display = "none";
 
-                  // Create pairs of images and info
-                  const slides = [];
-                  for (
-                    let i = 0;
-                    i < Math.max(artworkImgs.length, artworkInfos.length);
-                    i++
-                  ) {
-                    const img = artworkImgs[i] ? artworkImgs[i].outerHTML : "";
-                    const info = artworkInfos[i]
-                      ? artworkInfos[i].outerHTML
-                      : "";
-                    slides.push({ img, info });
-                  }
+          if (section.querySelector(".art-carousel-container")) return;
 
-                  const carouselHTML = `
-                            <div class="carousel-container">
-                                <div class="carousel-slides">
-                                    ${slides
-                                      .map(
-                                        (slide, index) => `
-                                        <div class="carousel-slide polaroid ${
-                                          index === 0 ? "active" : ""
-                                        }">
-                                            ${slide.img}
-                                            ${slide.info}
-                                        </div>
-                                    `
-                                      )
-                                      .join("")}
-                                </div>
-                                <div class="carousel-controls">
-                                    <button class="carousel-btn prev-btn">‹</button>
-                                    <button class="carousel-btn next-btn">›</button>
-                                </div>
-                                <div class="carousel-dots">
-                                    ${slides
-                                      .map(
-                                        (_, index) => `
-                                        <button class="carousel-dot ${
-                                          index === 0 ? "active" : ""
-                                        }" data-index="${index}"></button>
-                                    `
-                                      )
-                                      .join("")}
-                                </div>
-                            </div>
-                        `;
+          const artworkImgs = section.querySelectorAll(".artwork-img");
+          const artworkInfos = section.querySelectorAll(".artwork-info");
 
-                  artCarousel.innerHTML = carouselHTML;
-                  setupCarousel(
-                    `#${sectionId} .art-carousel-container .carousel-container`,
-                    slides.length
-                  );
-                }
-              }
-            }
+          if (artworkImgs.length === 0) return;
+
+          const carouselContainer = document.createElement("div");
+          carouselContainer.className = "art-carousel-container";
+          artContainer.parentNode.insertBefore(
+            carouselContainer,
+            artContainer.nextSibling
+          );
+
+          const slides = [];
+          for (
+            let i = 0;
+            i < Math.max(artworkImgs.length, artworkInfos.length);
+            i++
+          ) {
+            const img = artworkImgs[i]?.outerHTML || "";
+            const info = artworkInfos[i]?.outerHTML || "";
+            slides.push({ img, info });
           }
+
+          const carouselHTML = `
+      <div class="carousel-container">
+        <div class="carousel-slides">
+          ${slides
+            .map(
+              (slide, index) => `
+            <div class="carousel-slide polaroid ${index === 0 ? "active" : ""}">
+              ${slide.img}
+              ${slide.info}
+            </div>
+          `
+            )
+            .join("")}
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn prev-btn">‹</button>
+          <button class="carousel-btn next-btn">›</button>
+        </div>
+        <div class="carousel-dots">
+          ${slides
+            .map(
+              (_, index) => `
+            <button class="carousel-dot ${
+              index === 0 ? "active" : ""
+            }" data-index="${index}"></button>
+          `
+            )
+            .join("")}
+        </div>
+      </div>
+    `;
+
+          carouselContainer.innerHTML = carouselHTML;
+          setupCarousel(
+            `#${sectionId} .art-carousel-container .carousel-container`,
+            slides.length
+          );
         });
       }
 
@@ -970,416 +1080,802 @@
         let currentSlide = 0;
 
         function showSlide(index) {
-          // Hide all slides
           slides.forEach((slide) => slide.classList.remove("active"));
           dots.forEach((dot) => dot.classList.remove("active"));
 
-          // Show current slide
           slides[index].classList.add("active");
           dots[index].classList.add("active");
           currentSlide = index;
         }
 
         function nextSlide() {
-          let nextIndex = currentSlide + 1;
-          if (nextIndex >= totalSlides) nextIndex = 0;
-          showSlide(nextIndex);
+          showSlide((currentSlide + 1) % totalSlides);
         }
 
         function prevSlide() {
-          let prevIndex = currentSlide - 1;
-          if (prevIndex < 0) prevIndex = totalSlides - 1;
-          showSlide(prevIndex);
+          showSlide((currentSlide - 1 + totalSlides) % totalSlides);
         }
 
-        // Event listeners
-        if (prevBtn) prevBtn.addEventListener("click", prevSlide);
-        if (nextBtn) nextBtn.addEventListener("click", nextSlide);
+        prevBtn?.addEventListener("click", prevSlide);
+        nextBtn?.addEventListener("click", nextSlide);
 
         dots.forEach((dot, index) => {
           dot.addEventListener("click", () => showSlide(index));
         });
 
-        // Touch/swipe support for mobile
         let touchStartX = 0;
-        let touchEndX = 0;
-
         container.addEventListener("touchstart", (e) => {
           touchStartX = e.changedTouches[0].screenX;
         });
 
         container.addEventListener("touchend", (e) => {
-          touchEndX = e.changedTouches[0].screenX;
-          handleSwipe();
-        });
-
-        function handleSwipe() {
-          const swipeThreshold = 50;
+          const touchEndX = e.changedTouches[0].screenX;
           const diff = touchStartX - touchEndX;
+          const swipeThreshold = 50;
 
           if (Math.abs(diff) > swipeThreshold) {
-            if (diff > 0) {
-              // Swipe left - next slide
-              nextSlide();
-            } else {
-              // Swipe right - previous slide
-              prevSlide();
-            }
+            diff > 0 ? nextSlide() : prevSlide();
           }
-        }
+        });
       }
 
-      // Initialize carousels on DOM load
-      document.addEventListener("DOMContentLoaded", function () {
-        initializeCarousels();
+      function initImageModal() {
+        console.log("initImageModal called, window width:", window.innerWidth);
 
-        // Re-initialize carousels on window resize
-        window.addEventListener("resize", function () {
-          initializeCarousels();
+        const modal = {
+          element: document.getElementById("imageModal"),
+          img: document.getElementById("modalImg"),
+          caption: document.getElementById("modalCaption"),
+          close: document.getElementById("modalClose"),
+          loading: document.getElementById("modalLoading"),
+          zoomIn: document.getElementById("zoomIn"),
+          zoomOut: document.getElementById("zoomOut"),
+          zoomReset: document.getElementById("zoomReset"),
+        };
+
+        console.log("Modal elements:", {
+          element: !!modal.element,
+          img: !!modal.img,
+          close: !!modal.close,
         });
-      });
 
-      // Image Modal Functionality
-      document.addEventListener("DOMContentLoaded", function() {
-        // Get modal elements
-        const imageModal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('modalImg');
-        const modalCaption = document.getElementById('modalCaption');
-        const modalClose = document.getElementById('modalClose');
-        const modalLoading = document.getElementById('modalLoading');
-        const zoomIn = document.getElementById('zoomIn');
-        const zoomOut = document.getElementById('zoomOut');
-        const zoomReset = document.getElementById('zoomReset');
-        
-        // Arrays to store all clickable images and their data
+        if (!modal.element) {
+          console.error("Image modal element not found!");
+          // Create modal if it doesn't exist
+          createModal();
+          return;
+        }
+
         let allImages = [];
         let currentImageIndex = 0;
         let currentScale = 1;
-        
-        // Initialize modal only on mobile
-        function initializeImageModal() {
-          if (window.innerWidth > 1024) {
-            // Don't initialize on desktop if you prefer
-            return;
-          }
-          
-          // Collect all images that should be clickable
-          collectClickableImages();
-          
-          // Add click event listeners to all images
-          addImageClickListeners();
-          
-          // Setup modal event listeners
-          setupModalEvents();
+        let isDesktop = window.innerWidth > 1024;
+
+        // Collect all images
+        collectClickableImages();
+
+        // Setup for both desktop and mobile, but with different behaviors
+        if (isDesktop) {
+          // Desktop: Add hover effects and visual feedback
+          setupDesktopImageInteractions();
+        } else {
+          // Mobile: Just make images clickable without hover effects
+          setupMobileImageInteractions();
         }
-        
-        function collectClickableImages() {
-          // Clear existing array
-          allImages = [];
-          
-          // Get painter card images
-          const painterImages = document.querySelectorAll('.painter-card img, .carousel-slide .painter-card img');
-          painterImages.forEach(img => {
-            const card = img.closest('.painter-card');
-            if (card) {
-              const title = card.querySelector('.painter-name')?.textContent || '';
-              const description = card.querySelector('.painter-bio')?.textContent || '';
-              allImages.push({
-                src: img.src,
-                alt: img.alt,
-                title: title,
-                description: description,
-                type: 'painter'
+
+        setupModalEvents();
+
+        function setupDesktopImageInteractions() {
+          console.log("Setting up desktop image interactions...");
+
+          allImages.forEach((imageData) => {
+            const img = imageData.element;
+
+            // Make clickable
+            img.style.cursor = "pointer";
+            img.setAttribute("tabindex", "0");
+            img.setAttribute("role", "button");
+            img.setAttribute("aria-label", `View ${img.alt} in larger detail`);
+
+            // Add hover effects
+            if (imageData.type === "painter") {
+              img.addEventListener("mouseenter", () => {
+                img.style.transform = "scale(1.02)";
+                img.style.transition = "transform 0.3s ease";
+              });
+
+              img.addEventListener("mouseleave", () => {
+                img.style.transform = "scale(1)";
+              });
+            } else if (imageData.type === "artwork") {
+              img.addEventListener("mouseenter", () => {
+                img.style.transform = "scale(1.01)";
+                img.style.opacity = "0.95";
+                img.style.transition = "transform 0.3s ease, opacity 0.3s ease";
+              });
+
+              img.addEventListener("mouseleave", () => {
+                img.style.transform = "scale(1)";
+                img.style.opacity = "1";
               });
             }
+
+            // Click listener
+            img.addEventListener("click", function (e) {
+              console.log("Image clicked on desktop:", img.alt);
+              e.stopPropagation();
+              handleImageClick(this);
+            });
           });
-          
-          // Get artwork images from carousels
-          const artworkImages = document.querySelectorAll('.artwork-img, .carousel-slide .artwork-img');
-          artworkImages.forEach(img => {
-            // Find the artwork info associated with this image
-            let title = '';
-            let details = '';
-            
-            // Look for artwork-info in the same carousel slide
-            const slide = img.closest('.carousel-slide');
-            if (slide) {
-              const info = slide.querySelector('.artwork-info');
-              if (info) {
-                title = info.querySelector('.artwork-title')?.textContent || '';
-                details = info.querySelector('.artwork-details')?.textContent || '';
-              }
-            }
-            
-            // If no carousel, look for nearby artwork-info
-            if (!title) {
-              const container = img.closest('.art-section-container, .artwork-group');
-              if (container) {
-                const info = container.nextElementSibling;
-                if (info && info.classList.contains('artwork-info')) {
-                  title = info.querySelector('.artwork-title')?.textContent || '';
-                  details = info.querySelector('.artwork-details')?.textContent || '';
-                }
-              }
-            }
-            
+        }
+
+        function setupMobileImageInteractions() {
+          console.log("Setting up mobile image interactions...");
+
+          allImages.forEach((imageData) => {
+            const img = imageData.element;
+
+            // Make clickable
+            img.style.cursor = "pointer";
+            img.setAttribute("tabindex", "0");
+            img.setAttribute("role", "button");
+            img.setAttribute("aria-label", `Tap to view ${img.alt}`);
+
+            // Touch/click listener for mobile
+            img.addEventListener("click", function (e) {
+              console.log("Image tapped on mobile:", img.alt);
+              e.stopPropagation();
+              handleImageClick(this);
+            });
+
+            // Also support touch events for better mobile UX
+            img.addEventListener(
+              "touchstart",
+              function (e) {
+                // Add touch feedback
+                this.style.opacity = "0.8";
+              },
+              { passive: true }
+            );
+
+            img.addEventListener(
+              "touchend",
+              function (e) {
+                this.style.opacity = "1";
+              },
+              { passive: true }
+            );
+          });
+        }
+
+        function handleImageClick(imgElement) {
+          console.log("handleImageClick called for:", imgElement.src);
+
+          // Add click animation (desktop only)
+          if (isDesktop) {
+            imgElement.classList.add("image-clicked");
+            setTimeout(() => {
+              imgElement.classList.remove("image-clicked");
+            }, 600);
+          }
+
+          // Find this image in our collection
+          const clickedSrc = imgElement.src;
+          currentImageIndex = allImages.findIndex(
+            (imgData) => imgData.src === clickedSrc
+          );
+
+          console.log("Found at index:", currentImageIndex);
+
+          if (currentImageIndex !== -1) {
+            openModal(currentImageIndex);
+          } else {
+            console.error("Image not found in collection!");
+            openSingleImage(imgElement);
+          }
+        }
+
+        function collectClickableImages() {
+          allImages = [];
+          console.log("Collecting all clickable images...");
+
+          // Painter cards - check for both desktop and mobile versions
+          const painterImages = document.querySelectorAll(
+            ".painter-card img, .painters-carousel-container .painter-card img"
+          );
+          console.log("Found painter images:", painterImages.length);
+
+          painterImages.forEach((img, index) => {
+            // Find the closest card container
+            const card = img.closest(".painter-card");
+            if (!card) return;
+
+            const name =
+              card.querySelector(".painter-name")?.textContent ||
+              `Painter ${index + 1}`;
+            const bio = card.querySelector(".painter-bio")?.textContent || "";
+
             allImages.push({
+              element: img,
+              src: img.src,
+              alt: img.alt,
+              title: name,
+              description: bio,
+              type: "painter",
+            });
+          });
+
+          // Artwork images - check for both grid and carousel versions
+          const artworkImages = document.querySelectorAll(
+            ".artwork-img, .art-carousel-container .artwork-img"
+          );
+          console.log("Found artwork images:", artworkImages.length);
+
+          artworkImages.forEach((img, index) => {
+            // Try to find artwork info
+            let title = img.alt;
+            let details = "";
+
+            // Check if there's a sibling .artwork-info element
+            const parent = img.closest(".artwork-group, .carousel-slide");
+            if (parent) {
+              const infoElement =
+                parent.querySelector(".artwork-info") ||
+                parent.nextElementSibling?.classList.contains("artwork-info")
+                  ? parent.nextElementSibling
+                  : null;
+
+              if (infoElement) {
+                title =
+                  infoElement.querySelector(".artwork-title")?.textContent ||
+                  img.alt;
+                details =
+                  infoElement.querySelector(".artwork-details")?.textContent ||
+                  "";
+              }
+            }
+
+            allImages.push({
+              element: img,
               src: img.src,
               alt: img.alt,
               title: title,
               details: details,
-              type: 'artwork'
+              type: "artwork",
             });
           });
-          
-          // Get hero image
-          const heroImage = document.querySelector('.hero-image');
+
+          // Hero image
+          const heroImage = document.querySelector(".hero-image");
           if (heroImage) {
             allImages.push({
+              element: heroImage,
               src: heroImage.src,
               alt: heroImage.alt,
-              title: 'THE GALLERY',
-              description: document.querySelector('.hero-description')?.textContent || '',
-              type: 'hero'
+              title: "THE GALLERY",
+              description: "Welcome to our curated art collection",
+              type: "hero",
             });
           }
+
+          console.log("Total images collected:", allImages.length);
         }
-        
-        function addImageClickListeners() {
-          // Remove existing listeners first
-          document.querySelectorAll('.painter-card img, .artwork-img, .hero-image, .carousel-slide img').forEach(img => {
-            img.removeEventListener('click', handleImageClick);
-          });
-          
-          // Add click listeners to all relevant images
-          document.querySelectorAll('.painter-card img, .artwork-img, .hero-image, .carousel-slide img').forEach((img, index) => {
-            img.style.cursor = 'pointer';
-            img.addEventListener('click', (e) => handleImageClick(e, img));
-          });
-        }
-        
-        function handleImageClick(e, clickedImg) {
-          e.stopPropagation();
-          
-          // Find the clicked image in our array
-          const clickedSrc = clickedImg.src;
-          currentImageIndex = allImages.findIndex(img => img.src === clickedSrc);
-          
-          if (currentImageIndex !== -1) {
-            openModal(currentImageIndex);
-          }
-        }
-        
+
         function openModal(index) {
-          if (index < 0 || index >= allImages.length) return;
-          
+          console.log("openModal called with index:", index);
+
+          if (index < 0 || index >= allImages.length) {
+            console.error("Invalid index:", index);
+            return;
+          }
+
           currentImageIndex = index;
           const imageData = allImages[index];
-          
-          // Show loading
-          modalLoading.style.display = 'block';
-          modalImg.style.opacity = '0';
-          
-          // Load image
+
+          modal.loading.style.display = "block";
+          modal.img.style.opacity = "0";
+          modal.caption.innerHTML = "";
+
           const img = new Image();
-          img.onload = function() {
-            modalImg.src = imageData.src;
-            modalImg.alt = imageData.alt;
-            
-            // Set caption based on type
-            let caption = '';
-            if (imageData.type === 'painter') {
-              caption = `<strong>${imageData.title}</strong><br>${imageData.description}`;
-            } else if (imageData.type === 'artwork') {
+          img.onload = function () {
+            console.log("Image loaded successfully");
+            modal.img.src = imageData.src;
+            modal.img.alt = imageData.alt;
+
+            // Set caption
+            let caption = "";
+            if (imageData.type === "painter") {
+              caption = `<strong>${imageData.title}</strong><br><br>${imageData.description}`;
+            } else if (imageData.type === "artwork") {
               caption = `<strong>${imageData.title}</strong><br>${imageData.details}`;
             } else {
               caption = `<strong>${imageData.title}</strong><br>${imageData.description}`;
             }
-            
-            modalCaption.innerHTML = caption;
-            
-            // Hide loading and show image
+
+            modal.caption.innerHTML = caption;
+
+            // Show modal
+            modal.element.classList.add("active");
+            modal.element.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+
             setTimeout(() => {
-              modalLoading.style.display = 'none';
-              modalImg.style.opacity = '1';
+              modal.loading.style.display = "none";
+              modal.img.style.opacity = "1";
               resetZoom();
+
+              // Focus close button for accessibility
+              modal.close.focus();
             }, 300);
           };
-          
-          img.onerror = function() {
-            modalLoading.textContent = 'Failed to load image';
+
+          img.onerror = function () {
+            console.error("Failed to load image:", imageData.src);
+            modal.loading.textContent = "Failed to load image";
             setTimeout(() => {
-              modalLoading.style.display = 'none';
+              modal.loading.style.display = "none";
               closeModal();
             }, 2000);
           };
-          
+
           img.src = imageData.src;
-          
-          // Show modal
-          imageModal.classList.add('active');
-          document.body.style.overflow = 'hidden';
         }
-        
+
         function closeModal() {
-          imageModal.classList.remove('active');
-          document.body.style.overflow = '';
+          console.log("Closing modal");
+
+          modal.element.classList.remove("active");
+          modal.element.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
           resetZoom();
         }
-        
-        function navigateModal(direction) {
-          if (direction === 'prev' && currentImageIndex > 0) {
-            openModal(currentImageIndex - 1);
-          } else if (direction === 'next' && currentImageIndex < allImages.length - 1) {
-            openModal(currentImageIndex + 1);
-          }
-        }
-        
-        // Zoom functionality
+
         function resetZoom() {
           currentScale = 1;
-          modalImg.style.transform = `scale(${currentScale})`;
-          modalImg.style.transformOrigin = 'center center';
+          modal.img.style.transform = `scale(${currentScale})`;
+          modal.img.style.transformOrigin = "center center";
         }
-        
-        function applyZoom() {
-          modalImg.style.transform = `scale(${currentScale})`;
-          // Prevent zoom from going too small or too large
-          currentScale = Math.max(0.5, Math.min(currentScale, 5));
-        }
-        
+
         function setupModalEvents() {
+          console.log("Setting up modal events for all devices");
+
           // Close modal
-          modalClose.addEventListener('click', closeModal);
-          
-          // Close modal when clicking outside image
-          imageModal.addEventListener('click', function(e) {
-            if (e.target === imageModal) {
+          modal.close.addEventListener("click", closeModal);
+
+          // Close on background click
+          modal.element.addEventListener("click", (e) => {
+            if (e.target === modal.element) {
               closeModal();
             }
           });
-          
-          // Keyboard navigation
-          document.addEventListener('keydown', function(e) {
-            if (!imageModal.classList.contains('active')) return;
-            
-            if (e.key === 'Escape') {
+
+          // Keyboard navigation (desktop)
+          document.addEventListener("keydown", (e) => {
+            if (!modal.element.classList.contains("active")) return;
+
+            if (e.key === "Escape") {
               closeModal();
-            } else if (e.key === 'ArrowLeft') {
-              navigateModal('prev');
-            } else if (e.key === 'ArrowRight') {
-              navigateModal('next');
+            } else if (e.key === "ArrowLeft") {
+              if (currentImageIndex > 0) {
+                openModal(currentImageIndex - 1);
+              }
+            } else if (e.key === "ArrowRight") {
+              if (currentImageIndex < allImages.length - 1) {
+                openModal(currentImageIndex + 1);
+              }
             }
           });
-          
-          // Touch/swipe navigation
+
+          // Touch/swipe support (mobile)
           let touchStartX = 0;
-          let touchEndX = 0;
-          
-          imageModal.addEventListener('touchstart', function(e) {
-            touchStartX = e.changedTouches[0].screenX;
-          }, { passive: true });
-          
-          imageModal.addEventListener('touchend', function(e) {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-          }, { passive: true });
-          
-          function handleSwipe() {
-            const swipeThreshold = 50;
-            const diff = touchStartX - touchEndX;
-            
-            if (Math.abs(diff) > swipeThreshold) {
-              if (diff > 0 && currentImageIndex < allImages.length - 1) {
-                // Swipe left - next image
-                navigateModal('next');
-              } else if (diff < 0 && currentImageIndex > 0) {
-                // Swipe right - previous image
-                navigateModal('prev');
+          modal.element.addEventListener(
+            "touchstart",
+            (e) => {
+              touchStartX = e.changedTouches[0].screenX;
+            },
+            { passive: true }
+          );
+
+          modal.element.addEventListener(
+            "touchend",
+            (e) => {
+              const touchEndX = e.changedTouches[0].screenX;
+              const diff = touchStartX - touchEndX;
+              const swipeThreshold = 50;
+
+              if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0 && currentImageIndex < allImages.length - 1) {
+                  openModal(currentImageIndex + 1);
+                } else if (diff < 0 && currentImageIndex > 0) {
+                  openModal(currentImageIndex - 1);
+                }
               }
-            }
-          }
-          
+            },
+            { passive: true }
+          );
+
           // Zoom controls
-          zoomIn.addEventListener('click', function() {
-            if (currentScale < 5) {
-              currentScale += 0.5;
-              applyZoom();
-            }
-          });
-          
-          zoomOut.addEventListener('click', function() {
-            if (currentScale > 0.5) {
-              currentScale -= 0.5;
-              applyZoom();
-            }
-          });
-          
-          zoomReset.addEventListener('click', resetZoom);
-          
-          // Double-click zoom
-          modalImg.addEventListener('dblclick', function(e) {
-            if (currentScale === 1) {
-              currentScale = 2;
-              // Set transform origin to where user double-clicked
-              const rect = this.getBoundingClientRect();
-              const x = e.clientX - rect.left;
-              const y = e.clientY - rect.top;
-              this.style.transformOrigin = `${x}px ${y}px`;
-            } else {
-              currentScale = 1;
-              this.style.transformOrigin = 'center center';
-            }
-            applyZoom();
-          });
-          
-          // Pinch zoom for mobile
-          let initialDistance = 0;
-          let initialScale = 1;
-          
-          imageModal.addEventListener('touchstart', function(e) {
-            if (e.touches.length === 2) {
-              e.preventDefault();
-              initialDistance = Math.hypot(
-                e.touches[0].clientX - e.touches[1].clientX,
-                e.touches[0].clientY - e.touches[1].clientY
-              );
-              initialScale = currentScale;
-            }
-          }, { passive: false });
-          
-          imageModal.addEventListener('touchmove', function(e) {
-            if (e.touches.length === 2) {
-              e.preventDefault();
-              const currentDistance = Math.hypot(
-                e.touches[0].clientX - e.touches[1].clientX,
-                e.touches[0].clientY - e.touches[1].clientY
-              );
-              
-              if (initialDistance) {
-                const scaleFactor = currentDistance / initialDistance;
-                currentScale = Math.max(0.5, Math.min(initialScale * scaleFactor, 5));
-                applyZoom();
-              }
-            }
-          }, { passive: false });
+          if (modal.zoomIn) {
+            modal.zoomIn.addEventListener("click", () => {
+              currentScale = Math.min(currentScale + 0.2, 3);
+              modal.img.style.transform = `scale(${currentScale})`;
+            });
+          }
+
+          if (modal.zoomOut) {
+            modal.zoomOut.addEventListener("click", () => {
+              currentScale = Math.max(currentScale - 0.2, 0.5);
+              modal.img.style.transform = `scale(${currentScale})`;
+            });
+          }
+
+          if (modal.zoomReset) {
+            modal.zoomReset.addEventListener("click", resetZoom);
+          }
         }
-        
-        // Initialize modal on page load
-        initializeImageModal();
-        
-        // Re-initialize on resize (for carousel changes)
-        window.addEventListener('resize', function() {
-          setTimeout(initializeImageModal, 100);
+
+        function createModal() {
+          console.log("Creating modal element");
+
+          const modalHTML = `
+      <div class="image-modal" id="imageModal" role="dialog" aria-modal="true" aria-labelledby="modalCaption" aria-hidden="true">
+        <button class="modal-close" id="modalClose" aria-label="Close image view">&times;</button>
+        <div class="modal-content">
+          <img class="modal-img" id="modalImg" src="" alt="" />
+          <div class="modal-caption" id="modalCaption" role="region" aria-live="polite"></div>
+          <div class="modal-zoom-controls">
+            <button class="zoom-btn" id="zoomIn" aria-label="Zoom in">+</button>
+            <button class="zoom-btn" id="zoomOut" aria-label="Zoom out">-</button>
+            <button class="zoom-btn" id="zoomReset" aria-label="Reset zoom">↺</button>
+          </div>
+          <div class="modal-swipe-indicator" aria-hidden="true">Swipe to navigate</div>
+        </div>
+        <div class="modal-loading" id="modalLoading" style="display: none" aria-live="assertive">Loading</div>
+      </div>
+    `;
+
+          document.body.insertAdjacentHTML("beforeend", modalHTML);
+
+          // Reinitialize with the new modal
+          initImageModal();
+        }
+
+        // Update on resize
+        window.addEventListener("resize", function () {
+          isDesktop = window.innerWidth > 1024;
+
+          // Re-setup interactions if needed
+          allImages.forEach((imageData) => {
+            const img = imageData.element;
+
+            if (isDesktop) {
+              // Re-add hover effects for desktop
+              img.style.cursor = "pointer";
+
+              if (imageData.type === "painter") {
+                img.onmouseenter = null;
+                img.onmouseleave = null;
+
+                img.addEventListener("mouseenter", () => {
+                  img.style.transform = "scale(1.02)";
+                  img.style.transition = "transform 0.3s ease";
+                });
+
+                img.addEventListener("mouseleave", () => {
+                  img.style.transform = "scale(1)";
+                });
+              }
+            } else {
+              // Remove hover effects for mobile
+              img.style.cursor = "pointer";
+              img.onmouseenter = null;
+              img.onmouseleave = null;
+              img.style.transform = "";
+              img.style.opacity = "";
+            }
+          });
         });
-        
-        // Also re-initialize when carousels are created
-        const originalInitializeCarousels = initializeCarousels;
-        initializeCarousels = function() {
-          originalInitializeCarousels();
-          setTimeout(initializeImageModal, 100);
-        };
+
+        console.log("Image modal initialization complete for all devices");
+      }
+
+      function initBackgroundAudio() {
+  const audio = document.getElementById("backgroundAudio");
+  const audioToggle = document.getElementById("audioToggle");
+  const audioIcon = audioToggle?.querySelector(".audio-icon");
+  const mutedIcon = audioToggle?.querySelector(".muted-icon");
+  const volumeControl = document.getElementById("volumeControl");
+  const volumeLevel = document.querySelector(".volume-level");
+  const audioControls = document.querySelector(".audio-controls");
+
+  if (!audio || !audioToggle) return;
+
+  const isMuted = localStorage.getItem("galleryAudioMuted") === "true";
+  const savedVolume = localStorage.getItem("galleryAudioVolume") || 30;
+
+  audio.volume = savedVolume / 100;
+  volumeControl.value = savedVolume;
+  if (volumeLevel) volumeLevel.textContent = `${savedVolume}%`;
+
+  if (isMuted) {
+    audio.pause();
+    updateAudioUI(false);
+  } else {
+    audio.play().then(() => {
+      updateAudioUI(true);
+    }).catch(() => {
+      updateAudioUI(false);
+      localStorage.setItem("galleryAudioMuted", "true");
+    });
+  }
+
+  audioToggle.addEventListener("click", function (e) {
+    e.stopPropagation();
+
+    if (audio.paused) {
+      audio.play().then(() => {
+        updateAudioUI(true);
+        localStorage.setItem("galleryAudioMuted", "false");
+        this.classList.add("active");
+      }).catch(() => {
+        showMobileNotification("Tap anywhere to enable audio");
+        this.classList.remove("active");
       });
+    } else {
+      audio.pause();
+      updateAudioUI(false);
+      localStorage.setItem("galleryAudioMuted", "true");
+      this.classList.remove("active");
+    }
+
+    // Click animation
+    this.classList.add("clicked");
+    setTimeout(() => this.classList.remove("clicked"), 400);
+  });
+
+  volumeControl.addEventListener("input", function () {
+    const volume = this.value / 100;
+    audio.volume = volume;
+    localStorage.setItem("galleryAudioVolume", this.value);
+    
+    // Update volume level display
+    if (volumeLevel) volumeLevel.textContent = `${this.value}%`;
+    
+    // Show volume level temporarily
+    volumeLevel.style.opacity = "1";
+    setTimeout(() => {
+      volumeLevel.style.opacity = "0";
+    }, 1000);
+
+    if (audio.paused) {
+      audio.play().then(() => {
+        updateAudioUI(true);
+        localStorage.setItem("galleryAudioMuted", "false");
+        audioToggle.classList.add("active");
+      });
+    }
+  });
+
+  volumeControl.addEventListener("change", function () {
+    setTimeout(() => {
+      volumeLevel.style.opacity = "0";
+    }, 1000);
+  });
+
+  function updateAudioUI(isPlaying) {
+    if (!audioIcon || !mutedIcon) return;
+
+    if (isPlaying) {
+      audioIcon.style.display = "block";
+      mutedIcon.style.display = "none";
+      audioToggle.classList.add("active");
+    } else {
+      audioIcon.style.display = "none";
+      mutedIcon.style.display = "block";
+      audioToggle.classList.remove("active");
+    }
+  }
+
+  // Mobile optimizations
+  if (window.innerWidth <= 768) {
+    // Toggle compact mode on click
+    audioToggle.addEventListener("click", function() {
+      audioControls.classList.toggle("compact");
+      
+      // Auto-expand volume controls after interaction
+      setTimeout(() => {
+        if (!audioControls.classList.contains("compact")) {
+          setTimeout(() => {
+            audioControls.classList.add("compact");
+          }, 3000);
+        }
+      }, 100);
+    });
+
+    // Show volume controls when touching volume icon
+    document.querySelector(".volume-icon")?.addEventListener("click", function(e) {
+      e.stopPropagation();
+      audioControls.classList.remove("compact");
+      volumeControl.focus();
+      
+      setTimeout(() => {
+        audioControls.classList.add("compact");
+      }, 5000);
+    });
+  }
+
+  // Auto-compact after 5 seconds of inactivity on mobile
+  if (window.innerWidth <= 768) {
+    let inactivityTimer;
+    function resetInactivityTimer() {
+      clearTimeout(inactivityTimer);
+      inactivityTimer = setTimeout(() => {
+        audioControls.classList.add("compact");
+      }, 5000);
+    }
+    
+    audioControls.addEventListener("mouseenter", resetInactivityTimer);
+    audioControls.addEventListener("touchstart", resetInactivityTimer);
+    resetInactivityTimer();
+  }
+}
+
+      function setupMobileAudioControls(audioToggle, audioControls) {
+        if (window.innerWidth > 768) return;
+
+        let touchStartTime = 0;
+        let touchTimer = null;
+
+        audioToggle.addEventListener(
+          "touchstart",
+          function () {
+            touchStartTime = Date.now();
+            touchTimer = setTimeout(() => {
+              audioControls.classList.add("active");
+            }, 500);
+          },
+          { passive: true }
+        );
+
+        audioToggle.addEventListener("touchend", function () {
+          clearTimeout(touchTimer);
+        });
+
+        document.addEventListener("touchstart", function (e) {
+          if (
+            audioControls.classList.contains("active") &&
+            !audioControls.contains(e.target)
+          ) {
+            audioControls.classList.remove("active");
+          }
+        });
+      }
+
+      function showMobileNotification(message) {
+        let notification = document.querySelector(".audio-notification");
+        if (!notification) {
+          notification = document.createElement("div");
+          notification.className = "audio-notification";
+          document.body.appendChild(notification);
+        }
+
+        notification.textContent = message;
+        notification.classList.add("show");
+
+        setTimeout(() => {
+          notification.classList.remove("show");
+          setTimeout(() => notification.remove(), 300);
+        }, 2000);
+      }
+
+      function initLoadingScreen() {
+        const loadingScreen = document.getElementById("loadingScreen");
+        if (!loadingScreen) return;
+
+        const images = document.querySelectorAll("img");
+        const totalImages = images.length;
+        let loadedImages = 0;
+
+        loadingScreen.style.display = "flex";
+        updateLoadingText("Preparing gallery experience...");
+
+        const progressBar = createProgressBar();
+        loadingScreen
+          .querySelector(".loading-content")
+          .appendChild(progressBar);
+
+        images.forEach((img) => {
+          img.classList.add("image-loading");
+
+          if (img.complete) {
+            imageLoaded();
+          } else {
+            img.addEventListener("load", imageLoaded);
+            img.addEventListener("error", imageLoaded);
+            setTimeout(imageLoaded, 5000);
+          }
+        });
+
+        if (totalImages === 0) {
+          finishLoading();
+        } else {
+          setTimeout(finishLoading, 10000);
+        }
+
+        function imageLoaded() {
+          loadedImages++;
+          updateProgressBar(loadedImages, totalImages);
+          updateLoadingText(`Loading images: ${loadedImages}/${totalImages}`);
+
+          if (this?.classList) {
+            this.classList.remove("image-loading");
+          }
+
+          if (loadedImages >= totalImages) {
+            finishLoading();
+          }
+        }
+
+        function finishLoading() {
+          updateLoadingText("Entering The Gallery...");
+          loadingScreen.classList.add("fade-out");
+
+          setTimeout(() => {
+            loadingScreen.style.display = "none";
+            document.body.classList.add("loaded");
+
+            const audio = document.getElementById("backgroundAudio");
+            if (audio && !audio.paused) {
+              audio
+                .play()
+                .catch((e) => console.log("Audio autoplay prevented"));
+            }
+          }, 800);
+        }
+      }
+
+      function updateLoadingText(text) {
+        const loadingText = document.querySelector(".loading-text");
+        if (loadingText) loadingText.textContent = text;
+      }
+
+      function createProgressBar() {
+        const container = document.createElement("div");
+        container.className = "loading-progress";
+        container.innerHTML =
+          '<div class="loading-progress-bar" id="progressBar"></div>';
+        return container;
+      }
+
+      function updateProgressBar(loaded, total) {
+        const progressBar = document.getElementById("progressBar");
+        if (progressBar) {
+          const progress = (loaded / total) * 100;
+          progressBar.style.width = `${progress}%`;
+        }
+      }
+
+      window.testLoading = function (delay = 2000) {
+        const loadingScreen = document.getElementById("loadingScreen");
+        if (loadingScreen) {
+          loadingScreen.style.display = "flex";
+          loadingScreen.classList.remove("fade-out");
+          setTimeout(() => {
+            loadingScreen.classList.add("fade-out");
+            setTimeout(() => (loadingScreen.style.display = "none"), 800);
+          }, delay);
+        }
+      };
+
+      window.showLoading = function () {
+        const loadingScreen = document.getElementById("loadingScreen");
+        if (loadingScreen) {
+          loadingScreen.style.display = "flex";
+          loadingScreen.classList.remove("fade-out");
+        }
+      };
+
+      
     </script>
   </body>
 </html>

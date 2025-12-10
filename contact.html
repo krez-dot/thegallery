@@ -3,75 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Primary Meta Tags -->
     <title>Contact The Gallery</title>
-    <meta
-      name="description"
-      content="Contact The Gallery for art submissions, exhibition inquiries, partnerships, and visit information. Submit your artwork to be featured in our collection."
-    />
-    <meta
-      name="keywords"
-      content="contact The Gallery, art submission, exhibition inquiry, art partnership, visit gallery, artist submission form, contact form"
-    />
+    <meta name="description" content="Contact The Gallery for art submissions, exhibition inquiries, partnerships, and visit information. Submit your artwork to be featured in our collection."/>
+    <meta name="keywords" content="contact The Gallery, art submission, exhibition inquiry, art partnership, visit gallery, artist submission form, contact form"/>
     <meta name="author" content="The Gallery" />
     <meta name="robots" content="index, follow" />
-
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://thegallery.example.com/contact.html"
-    />
-    <meta
-      property="og:title"
-      content="Contact The Gallery - Get In Touch & Submit Art"
-    />
-    <meta
-      property="og:description"
-      content="Contact The Gallery for art submissions, exhibition inquiries, and partnerships. Submit your artwork to be featured."
-    />
-    <meta
-      property="og:image"
-      content="https://thegallery.example.com/images/girlallu.png"
-    />
-    <meta
-      property="og:image:alt"
-      content="Contact The Gallery - Art submission and inquiries"
-    />
-
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://thegallery.example.com/contact.html" />
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
-    <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400&family=Manrope:wght@400;600&family=Onest:wght@700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="contactstyle.css" />
+    <meta property="og:title" content="Contact The Gallery - Get In Touch & Submit Art"/>
+    <meta property="og:description" content="Contact The Gallery for art submissions, exhibition inquiries, and partnerships. Submit your artwork to be featured."/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400&family=Manrope:wght@400;600&family=Onest:wght@700&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/contactstyle.css" />
   </head>
   <body>
-    <!-- Mobile Menu Toggle -->
     <button class="menu-toggle" id="menuToggle">☰</button>
     <div class="overlay" id="overlay"></div>
-
-    <!-- Header -->
     <div class="header"></div>
-
-    <!-- Main Container -->
     <div class="main-container">
-      <!-- Sidebar Navigation -->
       <div class="sidebar" id="sidebar">
         <div class="sidebar-content">
           <div class="sidebar-title">THE GALLERY</div>
           <div class="sidebar-divider"></div>
-
           <div class="nav-item" data-href="homepage.html">
             <div class="nav-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -83,7 +35,6 @@
             </div>
             <div class="nav-text">Home</div>
           </div>
-
           <div class="nav-item active" data-href="contact.html">
             <div class="nav-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -95,7 +46,6 @@
             </div>
             <div class="nav-text">Contact</div>
           </div>
-
           <div class="nav-item" data-href="about.html">
             <div class="nav-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -109,32 +59,24 @@
           </div>
         </div>
       </div>
-
-      <!-- Main Content -->
       <div class="main-content">
         <div class="contact-container">
-          <!-- Contact Image -->
           <div class="contact-image">
             <img src="images/girlallu.png" alt="Art Gallery" />
             <div class="image-caption">
-              If you would like to get your <strong>art be published</strong
-              ><br />
-              make sure to contact us just by providing your details in the
-              form!
+              If you would like to get your <strong>art be published</strong><br />make sure to contact us just by providing your details in
+              the form!
             </div>
           </div>
-
-          <!-- Contact Form -->
           <div class="contact-form">
             <div class="form-title">
               <h2>Get in touch</h2>
               <p>We are here for you! How can we help?</p>
             </div>
-
             <form id="contactForm">
               <div class="form-group">
-                <label for="name">Name</label>
-                <input
+                <label for="name">Name</label
+                ><input
                   type="text"
                   id="name"
                   class="form-control"
@@ -142,10 +84,9 @@
                   required
                 />
               </div>
-
               <div class="form-group">
-                <label for="email">Email</label>
-                <input
+                <label for="email">Email</label
+                ><input
                   type="email"
                   id="email"
                   class="form-control"
@@ -153,83 +94,63 @@
                   required
                 />
               </div>
-
               <div class="form-group">
-                <label for="message">Message</label>
-                <textarea
+                <label for="message">Message</label
+                ><textarea
                   id="message"
                   class="form-control"
                   placeholder="Your message"
                   required
                 ></textarea>
               </div>
-
               <button type="submit" class="submit-btn">Submit</button>
             </form>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Footer -->
-    <div class="footer">
+    <footer class="footer">
       <div class="footer-title">THE GALLERY</div>
       <div class="copyright">©2025, All rights reserved.</div>
-    </div>
-
-    <!-- JavaScript -->
+    </footer>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // Get elements
         const menuToggle = document.getElementById("menuToggle");
         const sidebar = document.getElementById("sidebar");
         const overlay = document.getElementById("overlay");
         const contactForm = document.getElementById("contactForm");
         const submitBtn = document.querySelector(".submit-btn");
         const navItems = document.querySelectorAll(".nav-item[data-href]");
-
-        // Function to check screen size and handle sidebar
         function handleScreenSize() {
           if (window.innerWidth <= 768) {
-            // Mobile: hide sidebar initially, show menu button
             sidebar.classList.remove("active");
             overlay.classList.remove("active");
             menuToggle.style.display = "block";
             document.body.style.overflow = "";
           } else {
-            // Desktop: show sidebar, hide menu button
             sidebar.classList.add("active");
             overlay.classList.remove("active");
             menuToggle.style.display = "none";
             document.body.style.overflow = "";
           }
         }
-
-        // Initial check
         handleScreenSize();
-
-        // Mobile menu functionality
         if (menuToggle && sidebar && overlay) {
           menuToggle.addEventListener("click", function (e) {
             e.stopPropagation();
             sidebar.classList.toggle("active");
             overlay.classList.toggle("active");
-
-            // Prevent body scrolling when sidebar is open
             if (sidebar.classList.contains("active")) {
               document.body.style.overflow = "hidden";
             } else {
               document.body.style.overflow = "";
             }
           });
-
           overlay.addEventListener("click", function () {
             sidebar.classList.remove("active");
             overlay.classList.remove("active");
             document.body.style.overflow = "";
           });
-
-          // Close sidebar when clicking outside on mobile
           document.addEventListener("click", function (e) {
             if (
               window.innerWidth <= 768 &&
@@ -244,13 +165,10 @@
             }
           });
         }
-
-        // Navigation
         navItems.forEach((item) => {
           item.addEventListener("click", function () {
             const href = this.getAttribute("data-href");
             if (href) {
-              // Close sidebar on mobile before navigating
               if (window.innerWidth <= 768) {
                 sidebar.classList.remove("active");
                 overlay.classList.remove("active");
@@ -260,44 +178,29 @@
             }
           });
         });
-
-        // Form submission
         if (contactForm && submitBtn) {
           contactForm.addEventListener("submit", function (e) {
             e.preventDefault();
-
             const name = document.getElementById("name").value.trim();
             const email = document.getElementById("email").value.trim();
             const message = document.getElementById("message").value.trim();
-
-            // Validation
             if (!name || !email || !message) {
               alert("Please fill in all fields");
               return;
             }
-
             if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
               alert("Please enter a valid email address");
               return;
             }
-
-            // Show loading state
             const originalText = submitBtn.textContent;
             submitBtn.textContent = "Sending...";
             submitBtn.disabled = true;
             submitBtn.classList.add("sending");
-
-            // Simulate API call
             setTimeout(() => {
-              // Success state
               submitBtn.textContent = "Message Sent!";
               submitBtn.classList.remove("sending");
               submitBtn.classList.add("success");
-
-              // Add success animation to the form
               contactForm.classList.add("success");
-
-              // Reset form after delay
               setTimeout(() => {
                 contactForm.reset();
                 submitBtn.textContent = originalText;
@@ -311,8 +214,6 @@
             }, 1500);
           });
         }
-
-        // Handle window resize
         window.addEventListener("resize", handleScreenSize);
       });
     </script>
